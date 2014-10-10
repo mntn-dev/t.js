@@ -4,8 +4,9 @@
 
 
 <img src="http://mn.tn/dev/t.js/t.1.gif" alt=""/><br/>
-<img src="http://mn.tn/dev/t.js/t.2.gif" alt=""/>
-<img src="http://mn.tn/dev/t.js/t.3.gif" alt=""/>
+<img src="http://mn.tn/dev/t.js/t.2.gif" alt=""/><br/>
+<img src="http://mn.tn/dev/t.js/t.3.gif" alt=""/><br/>
+&rarr; <a href="http://mn.tn/dev/t.js">More examples</a>
 
 
 <h3>Features</h3>
@@ -68,7 +69,3 @@ $(elem).data('pause');            // (bool)
 
 </pre>
 </small>
-
-<a href="http://mn.tn/dev/t.js">Examples</a>
-
-^
