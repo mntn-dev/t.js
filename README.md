@@ -30,6 +30,27 @@ $(elem).t(content[,{opts}]); &rarr; content-to-<u>elem</u>;
 
 <small>
 <pre>
+Setup
+-----
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="t.min.js"></script>
+
+^
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+$(function(){
+
+  $(elem).t();
+
+});
+
+/*]]>*/
+</script>
+
+^
 
 $(elem).t([content,]{
  
@@ -66,9 +87,10 @@ $(elem).data('is_typing');        // (bool)
 $(elem).data('pause');            // (bool)
 
 
-^
-^
-^
+/*CSS*/
+
+.t-container{}   /*content wrapper*/
+.t-caret{}       /*caret*/
 
 </pre>
 </small>
