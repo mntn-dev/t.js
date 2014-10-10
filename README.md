@@ -15,8 +15,7 @@
 <strong>HTML tag support</strong> &mdash; <em>The 'valid' way</em><br/>
 Deleting, Delaying/Inserting via <strong>&lt;del&gt;</strong> and <strong>&lt;ins&gt;</strong><br/>
 <strong>Mi$typ1ng</strong> based upon keyboard layout (<em>EN</em>, <em>DE</em>)<br/>
-<strong>Pause</strong><br/>
-Callbacks: <strong>init</strong>, <strong>typing</strong>, <strong>fin</strong><br/>
+<strong>Pause</strong>, Callbacks: <strong>init</strong>, <strong>typing</strong>, <strong>fin</strong><br/>
 <strong>...</strong></small>
 
 
