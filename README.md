@@ -1,8 +1,31 @@
-<img src="http://mn.tn/dev/t.js/t.js.1.png" alt="" height="100" width="100"/>
+<img src="http://mn.tn/dev/t.js/t.js.1.png" alt="" height="150" width="150"/>
 
-^
-^
-^
+<h1><a href="http://mn.tn/dev/t.js">t.js</a> - jQuery Typewriter</h1>
+
+
+<img src="http://mn.tn/dev/t.js/t.1.gif" alt=""/><br/>
+<img src="http://mn.tn/dev/t.js/t.2.gif" alt=""/>
+<img src="http://mn.tn/dev/t.js/t.3.gif" alt=""/>
+
+
+<h3>Features</h3>
+<small>
+<strong>HTML tags</strong> &mdash; <em>the 'valid' way</em><br/>
+Deleting and Delaying via <strong>&lt;del&gt;</strong> and <strong>&lt;ins&gt;</strong><br/>
+<strong>Mi$typ1ng</strong> based upon keyboard layout (<em>EN</em>, <em>DE</em>)<br/>
+...</small>
+
+
+<h3>Usage</h3>
+<small>
+$(elem).t(); &rarr; types <u>elem</u>'s .html()<br/>
+$(elem).t({opts}); &rarr; w/ custom settings<br/>
+$(elem).t(content[,{opts}]); &rarr; content-to-<u>elem</u>;
+</small>
+
+
+<small>
+<pre>
 
 $(elem).t([content,]{
  
@@ -41,4 +64,11 @@ $(elem).data('pause');            // (bool)
 
 ^
 ^
+^
+
+</pre>
+</small>
+
+<a href="http://mn.tn/dev/t.js">Examples</a>
+
 ^
