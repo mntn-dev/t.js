@@ -1,6 +1,6 @@
 <img src="http://mn.tn/dev/t.js/t.js.1.png" alt="" height="150" width="150"/>
 
-<h1><a href="http://mn.tn/dev/t.js">t.js</a> - jQuery Typewriter</h1>
+<h1><a href="http://mn.tn/dev/t.js">t.js</a> - $.Typewriter</h1>
 
 
 <img src="http://mn.tn/dev/t.js/t.1.gif" alt=""/><br/>
@@ -30,26 +30,6 @@ $(elem).t(content[,{opts}]); &rarr; content-to-<u>elem</u>;
 
 <small>
 <pre>
-Setup
------
-
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="t.min.js"></script>
-
-^
-
-<script type="text/javascript">
-/*<![CDATA[*/
-
-$(function(){
-
-  $(elem).t();
-
-});
-
-/*]]>*/
-</script>
-
 ^
 
 $(elem).t([content,]{
