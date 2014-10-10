@@ -8,6 +8,7 @@
 <img src="http://mn.tn/dev/t.js/t.3.gif" alt=""/><br/>
 &rarr; <a href="http://mn.tn/dev/t.js">More examples</a>
 
+<hr>
 
 <h3>Features</h3>
 <small>
