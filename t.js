@@ -1,4 +1,4 @@
-/*t.js-0.1;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
+/*t.js-0.2;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
 Licensed under the MIT License <http://mit-license.org/>;
 For documentation see http://github.com/mntn-dev/t.js or http://mn.tn/dev/t.js*/
 
@@ -14,7 +14,7 @@ return this.each(function(){
  return $.type(_1)[0]==(_2||'n');},f=function(){g=$.grep(d,function(f){return(f[0]=='&'||!f[1]);}).length-1;return(g>-1)?g:0;};
 
  _c===''&&(_c='<del>*</del>');
- if(c.data('is_typing')){if(_c=='pause')c.data('pause',((_o)?_o:((c.data('pause'))?0:1)));
+ if(c.data('is_typing')){if(_c=='pause')c.data('pause',((t(_o,'b'))?_o:((c.data('pause'))?!1:!!1)));
  return(this);}else{if(_c=='pause')return;c.data('is_typing',1);}
  
  t(_c,'o')&&(_o=_c);
@@ -69,18 +69,14 @@ return this.each(function(){
  }
 
 
-
-
- d=String((a||d)).replace(/(.*?)[\r\n\u200b]+$/,'$1').replace(/<\!\-\-([\s\S]+)\-\->/g,'$1').
- replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>(\d+[.]?\d{0,})</g,'<#ins data-ins="$1"><#/ins><#').
- replace(/(<del data-del=")([\s\S]+?)(".*?)></g,'$1$2$3>$2<').
- replace(/<del>([\s\S]*?)(?:\x20*<.*?( data-ins="(.*?)").*?(<#\/ins>)+)?</g,function(a,b,c,d){
- return '<del data-del="'+b.replace(/\n/,'\\n')+'" data-ins="'+((b!='*')?((d)?d:'.35'):'.25')+'">'+((b!='*')?b:'')+'<'}).
- replace(/(?!<ins)<(\w+)(.*?)>/g,'<$1$2></$1>').replace(/(<ins>)([\s\S]+?)(<\/ins>)/g,function(a,b,c,d){
- return b+c.replace(/<(.*?)><\/.*?>/g,'<$1>')+d;}).replace(/<#/g,"<").
- match(/<ins>[\s\S]+?<\/ins>|<\/.*?>|<[\s\S]+?<\/.*?>|<[\s\S]+?>|&[#x]?[a-z0-9]+;|\r|\n|\t|./ig);
+ d=String((a||d)).replace(/(.*?)[\u200b]+$/,'$1').replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').
+ replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>\x20*(\d+[.]?\d{0,})\x20*<\/ins>/g,'<ins data-ins="$1"></ins>').
+ replace(/<(ins)>(.*?)<\/ins>/g,'<#$1>$2</$1>').replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3>$2<#/$4').
+ replace(/<del(.*?)>([\s\S]*?)<\/del>/g,function(a,b,c,d){i=(c.match(/data-ins=\"(.*?)\"/));i=(i&&i[1])?i[1]:0.25;
+ c=c.replace(/<[\/]?.*?>/g,'');return('<del'+b+' data-del="'+c.replace(/\n/,'\\n')+'" data-ins="'+i+'">'+((c!='*')?c:'')+'</del>');}).
+ replace(/<(\w+)(.*?)>/g,'<$1$2></$1>').replace(/<#/g,"<").
+ match(/<ins>[\s\S]+?<\/ins>|<[^<]+\/>|<\/\w+>|<[\s\S]+?><\/\w+>|&[#x]?[a-z0-9]+;|\r|\n|\t|\S|\s/ig);
  !t(k)&&(k=d.shift());d.push(z);_o.locale=='de'&&(q=q2);dl=f();!a&&_o.init($$$.parent());
-
 
 
  $$=setInterval(function(){
@@ -95,7 +91,7 @@ return this.each(function(){
   if(a){d=$.merge(['<'+_o.tag+' class="typing-add"></'+_o.tag+'>'],d,['</'+_o.tag+'>']);c=c.parent();}}c=c.parent();
   o==z&&(c.find(':last').remove());k='';}else{c.text(k.join([]));return;}}}
 
-  if(k[1]=='/'){c=c.parent();k=d.shift()||'';}c.append(k);_o.typing($$$.parent(),f(),dl);!k.match(/<ins>/)&&k.match(/></)&&(c=c.find(':last'));
+  if(k[1]=='/'){c=c.parent();k=d.shift()||'';}c.append(k);_o.typing($$$.parent(),f(),dl,k);!k.match(/<ins>/)&&k.match(/></)&&(c=c.find(':last'));
 
   if(!(k=d.shift())){clearInterval($$);$$$.parent().removeData(['is_typing','pause']);
   t(_o.repeat)&&(--_o.repeat);if(_o.repeat>-1){_o.init=$.noop;$$$.parent().t(t(_c,'o')?_o:_c,_o);return;}
