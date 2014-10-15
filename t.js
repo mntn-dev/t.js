@@ -73,7 +73,7 @@ return this.each(function(){
  replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').
  replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').
  replace(/<ins>\x20*(\d+[.]?\d{0,})\x20*<\/ins>/g,'<ins data-ins="$1"></ins>').
- replace(/<ins>(.*?)<\/ins>/g,function(a,b){return('<#ins>'+b.replace(/</g,'<#')+'</ins>');}).
+ replace(/<ins>(.*?)<\/ins>/g,function(a,b){return('<#ins>'+b.replace(/<[^#]/g,'<#')+'</ins>');}).
  replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3>$2<#/$4').
  replace(/<del(.*?)>([\s\S]*?)<\/del>/g,function(a,b,c,d){i=(c.match(/data-ins=\"(.*?)\"/));i=(i&&i[1])?i[1]:0.25;
  c=c.replace(/<[\/]?.*?>/g,'');return('<del'+b+' data-del="'+c.replace(/\n/,'\\n')+'" data-ins="'+i+'">'+((c!='*')?c:'')+'</del>');}).
