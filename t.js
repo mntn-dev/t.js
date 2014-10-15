@@ -1,4 +1,4 @@
-/*t.js-0.2;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
+/*t.js-0.3;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
 Licensed under the MIT License <http://mit-license.org/>;
 For documentation see http://github.com/mntn-dev/t.js or http://mn.tn/dev/t.js*/
 
@@ -15,7 +15,7 @@ return this.each(function(){
 
  _c===''&&(_c='<del>*</del>');
  if(c.data('is_typing')){if(_c=='pause')c.data('pause',((t(_o,'b'))?_o:((c.data('pause'))?!1:!!1)));
- return(this);}else{if(_c=='pause')return;c.data('is_typing',1);}
+ return(this);}else{if(_c=='pause')return(this);c.data('is_typing',1);}
  
  t(_c,'o')&&(_o=_c);
  
@@ -63,15 +63,18 @@ return this.each(function(){
   $('.typing-add',c).remove();
 
   $$$=c=$(':first',c);
-  d=(t(_c,'s'))?_c:c.html();c.empty();$$$.parent().show().css({visibility:'visible'});
+  d=(t(_c,'s'))?_c:c.html();d==''&&(d=z);c.empty();$$$.parent().show().css({visibility:'visible'});
   t(_o.delay)&&_o.delay>0&&(k=~~((_o.delay*1e3)/_o.speed));
 
  }
 
 
- d=String((a||d)).replace(/(.*?)[\u200b]+$/,'$1').replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').
- replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>\x20*(\d+[.]?\d{0,})\x20*<\/ins>/g,'<ins data-ins="$1"></ins>').
- replace(/<(ins)>(.*?)<\/ins>/g,'<#$1>$2</$1>').replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3>$2<#/$4').
+ d=String((a||d)).replace(/(.*?)[\u200b]+$/,'$1').
+ replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').
+ replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').
+ replace(/<ins>\x20*(\d+[.]?\d{0,})\x20*<\/ins>/g,'<ins data-ins="$1"></ins>').
+ replace(/<ins>(.*?)<\/ins>/g,function(a,b){return('<#ins>'+b.replace(/</g,'<#')+'</ins>');}).
+ replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3>$2<#/$4').
  replace(/<del(.*?)>([\s\S]*?)<\/del>/g,function(a,b,c,d){i=(c.match(/data-ins=\"(.*?)\"/));i=(i&&i[1])?i[1]:0.25;
  c=c.replace(/<[\/]?.*?>/g,'');return('<del'+b+' data-del="'+c.replace(/\n/,'\\n')+'" data-ins="'+i+'">'+((c!='*')?c:'')+'</del>');}).
  replace(/<(\w+)(.*?)>/g,'<$1$2></$1>').replace(/<#/g,"<").
@@ -98,7 +101,8 @@ return this.each(function(){
   else _o.fin($$$.parent());return;}
 
   if(_o.mistype&&k&&!k[1]&&c.data().del!=z&&k!='\x20'&&!~~(Math.random()*_o.mistype)&&(__=$.inArray(k.toLowerCase(),q,2))>-1)
-  {__+=(~~(Math.random()*2))+1;~~(Math.random()*2)&&(__-=3);d=$.merge([((k.charCodeAt(0)<0x5a)?q[__].toUpperCase():q[__]),'</del>',k],d);k='<del data-ins="0.25" data-del="'+z+'"></del>';}
+  {__+=(~~(Math.random()*2))+1;~~(Math.random()*2)&&(__-=3);d=$.merge([((k.charCodeAt(0)<0x5a)?q[__].toUpperCase():q[__]),'</del>',k],d);
+  k='<del data-ins="0.25" data-del="'+z+'"></del>';}
   if(k&&k[1]=='/'&&c.data().ins)k=~~((Number(c.data().ins)*1e3)/_o.speed);
 
 
