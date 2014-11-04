@@ -1,4 +1,4 @@
-/*t.js-0.4;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
+/*t.js-0.5;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
 Licensed under the MIT License <http://mit-license.org/>;
 For documentation see http://github.com/mntn-dev/t.js or http://mn.tn/dev/t.js*/
 
@@ -70,6 +70,7 @@ return this.each(function(){
 
 
 
+
  d=String((a||d)).replace(/(.*?)[\u200b]+$/,'$1').
  replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').replace(/<ins><\/ins>/g,'').
  replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>\s*(\d+[.]?\d{0,})\s*<\/ins>/g,'<ins data-ins="$1"></ins>').
@@ -94,7 +95,7 @@ return this.each(function(){
   if(a){d=$.merge(['<'+_o.tag+' class="typing-add"></'+_o.tag+'>'],d,['</'+_o.tag+'>']);c=c.parent();}}c=c.parent();
   o==z&&(c.find(':last').remove());k='';}else{c.text(k.join([]));tt=!tt;return;}}}
 
-  if(k[1]=='/'){c=c.parent();k=d.shift()||'';}c.append(k);_o.typing($$$.parent(),f(),dl,k);!k.match(/<ins>/)&&k.match(/></)&&(c=c.find(':last'));
+  while(k[1]=='/'){c=c.parent();k=d.shift()||'';}c.append(k);_o.typing($$$.parent(),f(),dl,k);!k.match(/<ins>/)&&k.match(/></)&&(c=c.find(':last'));
 
   if(!(k=d.shift())){clearInterval($$);$$$.parent().removeData(['is_typing','pause']);
   t(_o.repeat)&&(--_o.repeat);if(_o.repeat>-1){_o.init=$.noop;$$$.parent().t(t(_c,'o')?_o:_c,_o);return;}
