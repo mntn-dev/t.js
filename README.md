@@ -6,14 +6,11 @@ $.Typewriter w/ nice features
 * t.js can type HTML, mistype, repeat, insert, delete, pause, delay and 'human-like'
 * &rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a>
 
-<code><pre>
+<pre style="font-size:x-small">
 &lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="t.min.js"&gt;&lt;/script&gt;
-
 $(function(){
-
 $(elem).t([content,]{
- 
 //Basic settings
 speed:75,          // typing speed (ms)
 speed_vary:false,  // 'human-like' (bool)
@@ -24,26 +21,19 @@ caret:true,        // caret (HTML); default (TRUE): ▎
 blink:false,       // blink; if TRUE, 10ms or N ms
 tag:'span',        // wrapper (.t-container/.t-caret)
 repeat:false,      // if TRUE, infinite or N times
- 
 //Callbacks
 init:function(elem){}, 
 typing:function(elem,chars_total,chars_left,char){},
 fin:function(elem){}
-
 });});
-
 //Methods
 $(elem).t('add',content);         // adds content
 $(elem).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted)
-
 //Data/properties
 $(elem).data('t');                // TRUE if initialised
 $(elem).data('is_typing');        // (bool)
 $(elem).data('pause');            // (bool)
-</pre></code>
-
-
-
+</pre>
 Let's type
 ---
 * <code>$(elem).t();</code> ∟ the most basic usage; reads elem's .html(), types
