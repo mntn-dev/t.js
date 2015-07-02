@@ -3,7 +3,8 @@
 
 $.Typewriter w/ nice features
 ===
-&rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a>
+* t.js can mistype, repeat, insert, delete, pause, delay and 'human-like'
+* &rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a>
 
 <code><pre>
 &lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
