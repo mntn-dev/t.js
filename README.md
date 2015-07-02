@@ -43,7 +43,7 @@ $(elem).data('pause');            // (bool)
 </pre></code>
 
 
-<code><pre>
+<pre>
 Let's type
 ---
 * $(elem).t(); ∟ the most basic usage; reads elem's .html(), types
@@ -73,4 +73,4 @@ Event-handling
 ----
 * To (re)attach events on typed content, simply use $(document).on(event,elem,function(){[...]});
 
-</pre></code>
+</pre>
