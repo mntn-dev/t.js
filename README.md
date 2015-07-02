@@ -3,7 +3,7 @@
 
 $.Typewriter w/ nice features
 ===
-* t.js can mistype, repeat, insert, delete, pause, delay and 'human-like'
+* t.js can type HTML, mistype, repeat, insert, delete, pause, delay and 'human-like'
 * &rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a>
 
 <code><pre>
