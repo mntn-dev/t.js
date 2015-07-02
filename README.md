@@ -33,8 +33,7 @@ fin:function(elem){}
 
 //Methods
 $(elem).t('add',content);         // adds content
-$(elem).t('pause'[,true/false]);  // pauses typing (toggles
-  				  // if 2nd param omitted)
+$(elem).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted)
 
 //Data/properties
 $(elem).data('t');                // TRUE if initialised
@@ -43,34 +42,34 @@ $(elem).data('pause');            // (bool)
 </pre></code>
 
 
-<pre>
+
 Let's type
 ---
-* $(elem).t(); ∟ the most basic usage; reads elem's .html(), types
-* $(elem).t({speed:30[,..]}); ∟ same as above but with settings
-* $(elem).t('msg'[,{settings}]); ∟ types msg (2nd, optionally param: settings)
+* <code>$(elem).t();</code> ∟ the most basic usage; reads elem's .html(), types
+* <code>$(elem).t({speed:30[,..]});</code> ∟ same as above but with settings
+* <code>$(elem).t('msg'[,{settings}]);</code> ∟ types msg (2nd, optionally param: settings)
 
 Adding content / pause typing
 ----
-* $(elem).t('add','msg');
-* $(elem).t('pause'[,(bool)]);
+* <code>$(elem).t('add','msg');</code> ∟ adds the string 'msg'
+* <code>$(elem).t('pause'[,(bool)]);</code>
 
 Del/Ins: Special treatment
 -----
-* &lt;del&gt;Moon&lt;/del&gt;Sun is up ∟ removes/deletes Moon
-* Foobar &lt;del&gt;*&lt;/del&gt;Hello! ∟ '*' deletes everything typed before; 'clearing'
-* &lt;del&gt;Moon&lt;ins&gt;2.5&lt;/ins&gt;&lt;/del&gt;Sun is up ∟  waits 2.5s before removing (having an numeric ins tag inside del)
-* Hold on!&lt;ins&gt;5&lt;ins&gt;&lt;br/&gt;OK. ∟ delays typing for 5s
-* Very &lt;ins&gt;&lt;strong&gt;fast&lt;/strong&gt; delivery&lt;ins&gt; of content. ∟ non-numeric: inserts content instantly
+* <code>&lt;del&gt;Moon&lt;/del&gt;Sun is up</code> ∟ removes/deletes Moon
+* Foobar <code>&lt;del&gt;&#42;&lt;/del&gt;Hello!</code> ∟ '*' deletes everything typed before; 'clearing'
+* <code>&lt;del&gt;Moon&lt;ins&gt;2.5&lt;/ins&gt;&lt;/del&gt;Sun is up</code> ∟  waits 2.5s before removing (having an numeric ins tag inside del)
+* <code>Hold on!&lt;ins&gt;5&lt;ins&gt;&lt;br/&gt;OK.</code> ∟ delays typing for 5s
+* <code>Very &lt;ins&gt;&lt;strong&gt;fast&lt;/strong&gt; delivery&lt;ins&gt; of content.</code> ∟ non-numeric: inserts content instantly
 
 Notes
 ----
-* Avoid additional HTML tags inside &lt;del&gt;, instead--for basic styling--wrap or set attributes (&lt;del class="red"&gt;text&lt;/del&gt;)
-* You can comment-out since t.js also parses for this, e.g. Foo&lt;!--&lt;del&gt;moo&lt;/del&gt;--&gt;bar or, for delaying, set ins{display:none;}
-* Unset &lt;del&gt;'s strike-through-style with CSS -> del{text-decoration:none;}
+* Avoid additional HTML tags inside <code>&lt;del&gt;</code>, instead--for basic styling--wrap or set attributes (<code>&lt;del class="red"&gt;text&lt;/del&gt;</code>)
+* You can comment-out since t.js also parses for this, e.g. <code>Foo&lt;!--&lt;del&gt;moo&lt;/del&gt;--&gt;bar</code> or, for delaying-only, set <code>ins{display:none;}</code>
+* Unset <code>&lt;del&gt;</code>'s strike-through-style with CSS > <code>del{text-decoration:none;}</code>
 
 Event-handling
 ----
-* To (re)attach events on typed content, simply use $(document).on(event,elem,function(){[...]});
+* To (re)attach events on typed content, simply use <code>$(document).on(event,elem,function(){[...]});</code>
 
-</pre>
+
