@@ -34,7 +34,7 @@ fin:function(elem){}
 //Methods
 $(elem).t('add',content);         // adds content
 $(elem).t('pause'[,true/false]);  // pauses typing (toggles
-								  // if 2nd param omitted)
+  				  // if 2nd param omitted)
 
 //Data/properties
 $(elem).data('t');                // TRUE if initialised
@@ -43,7 +43,7 @@ $(elem).data('pause');            // (bool)
 </pre></code>
 
 
-<code></pre>
+<code><pre>
 Let's type
 ---
 * $(elem).t(); ∟ the most basic usage; reads elem's .html(), types
