@@ -1,8 +1,9 @@
 
 <img height="250" width="250" src="http://mn.tn/dev/t.js/t.js.1.png"/>
 
-jQuery.Typewriter w/ nice features
-&rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a><br/>
+$.Typewriter w/ nice features
+===
+&rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a>
 
 <code><pre>
 &lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
