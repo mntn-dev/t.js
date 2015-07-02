@@ -42,7 +42,7 @@ $(elem).data('pause');            // (bool)
 </pre>
 Let's type
 ---
-* <code>$(elem).t();</code> ∟ the most basic usage; reads elem's .html(), types
+* <code>$(elem).t();</code> ∟ the most basic usage; reads elem's <code>.html()</code>, types
 * <code>$(elem).t({speed:30[,..]});</code> ∟ same as above but with settings
 * <code>$(elem).t('msg'[,{settings}]);</code> ∟ types msg (2nd, optionally param: settings)
 
