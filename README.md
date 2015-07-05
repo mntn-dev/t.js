@@ -44,7 +44,7 @@ Let's type
 ---
 * <code>$(elem).t();</code> ∟ the most basic usage; reads elem's <code>.html()</code>, types
 * <code>$(elem).t({speed:30[,..]});</code> ∟ same as above but with settings
-* <code>$(elem).t('msg'[,{settings}]);</code> ∟ types msg (2nd, optionally param: settings)
+* <code>$(elem).t('msg'[,{settings}]);</code> ∟ types 'msg' (2nd, optionally param: settings)
 
 Adding content / pause typing
 ----
@@ -56,8 +56,8 @@ Del/Ins: Special treatment
 * <code>&lt;del&gt;Moon&lt;/del&gt;Sun is up</code> ∟ removes/deletes 'Moon'
 * Foobar <code>&lt;del&gt;&#42;&lt;/del&gt;Hello!</code> ∟ '*' deletes everything typed before; 'clearing'
 * <code>&lt;del&gt;Moon&lt;ins&gt;2.5&lt;/ins&gt;&lt;/del&gt;Sun is up</code> ∟  waits 2.5s before removing (having an numeric ins tag inside del)
-* <code>Hold on!&lt;ins&gt;5&lt;ins&gt;&lt;br/&gt;OK.</code> ∟ delays typing for 5s
-* <code>Very &lt;ins&gt;&lt;strong&gt;fast&lt;/strong&gt; delivery&lt;ins&gt; of content.</code> ∟ non-numeric: inserts content instantly
+* <code>Hold on!&lt;ins&gt;5&lt;/ins&gt;&lt;br/&gt;OK.</code> ∟ delays typing for 5 seconds
+* <code>Very &lt;ins&gt;&lt;strong&gt;fast&lt;/strong&gt; delivery&lt;/ins&gt; of content.</code> ∟ non-numeric: inserts content instantly
 
 Notes
 ----
