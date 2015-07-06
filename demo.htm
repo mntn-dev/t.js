@@ -46,7 +46,7 @@ $(function(){
 
 
 
-$('div').t({
+$('#t').t({
 
 speed:35,
 speed_vary:true,
@@ -54,8 +54,14 @@ mistype:20,
 
 
 typing:function(elem,chars_total,chars_left,_char){
+ if(_char=='*')foo();
+ },
+ 
+fin:function(){
 
-if(_char=='*')foo();
+ window.setInterval(function(){
+  $('#t').find('.t-caret').toggle();
+ },5e2);
 
 }
 
@@ -76,8 +82,8 @@ if(_char=='*')foo();
 <body>
 
 <section>
-<div>
-<mark><a href="http://mn.tn/t">t.js&mdash;Demo</a></mark>
+<div id="t">
+<mark><a href="//mn.tn/t">t.js&mdash;Demo</a></mark>
 
 Hello world. Let's wait two seconds ..<ins>2</ins><br/><br/>
 <strong>Thanks for waiting.</strong> Now, t.js will detect a
