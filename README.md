@@ -4,7 +4,7 @@
 $.Typewriter w/ nice features
 ===
 * t.js can type HTML, mistype, repeat, insert, delete, pause, delay and 'human-like'
-* &rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a> / Before getting started, checkout a <a href="//rawgit.com/mntn-dev/t.js/master/demo.htm">demo</a>
+* &rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a> / Before getting started, checkout a <strong><a href="//rawgit.com/mntn-dev/t.js/master/demo.htm">demo</a></strong>
 
 <pre style="font-size:x-small">
 &lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
@@ -61,8 +61,8 @@ Del/Ins: Special treatment
 
 Notes
 ----
-* Avoid additional HTML tags inside <code>&lt;del&gt;</code>, instead--for basic styling--wrap or set attributes (<code>&lt;del class="red"&gt;text&lt;/del&gt;</code>)
-* You can comment-out since t.js also parses for this, e.g. <code>Foo&lt;!--&lt;del&gt;moo&lt;/del&gt;--&gt;bar</code> or, for delaying-only, set <code>ins{display:none;}</code>
+* <strong>Avoid</strong> additional HTML tags inside <code>&lt;del&gt;</code>, instead--for basic styling--wrap or set attributes (<code>&lt;del class="red"&gt;text&lt;/del&gt;</code>)
+* You can comment-out since t.js also parses for this, e.g. <code>Foo&lt;!--&lt;del&gt;moo&lt;/del&gt;--&gt;bar</code> or, for delaying-only-invisibility, set <code>ins{display:none;}</code>
 * Unset <code>&lt;del&gt;</code>'s strike-through-style with CSS > <code>del{text-decoration:none;}</code>
 
 Event-handling
