@@ -1,10 +1,10 @@
 
 <img height="250" width="250" src="http://mn.tn/dev/t.js/t.js.1.png"/>
 
-$.Typewriter w/ nice features
+jQuery.Typewriter w/ nice features
 ===
 * t.js can type HTML, mistype, repeat, insert, delete, pause, delay and 'human-like'
-* &rarr; <a href="http://mn.tn/dev/t.js">http://mn.tn/dev/t.js</a> / Before getting started, checkout a <strong><a href="//rawgit.com/mntn-dev/t.js/master/demo.htm">demo</a></strong>
+* Before getting started, checkout a <strong><a href="//rawgit.com/mntn-dev/t.js/master/demo.htm">demo</a></strong> (for more examples, visit <a href="http://mn.tn/t">http://mn.tn/t</a>)
 
 <pre style="font-size:x-small">
 &lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
