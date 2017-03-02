@@ -1,4 +1,4 @@
-/*t.js-0.5;(c)2014 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
+/*t.js-0.6;(c)2017 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
 Licensed under the MIT License <http://mit-license.org/>;
 For documentation see http://github.com/mntn-dev/t.js or http://mn.tn/dev/t.js*/
 
@@ -74,7 +74,7 @@ return this.each(function(){
  d=String((a||d)).replace(/(.*?)[\u200b]+$/,'$1').
  replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').replace(/<ins><\/ins>/g,'').
  replace(/<(img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>\s*(\d+[.]?\d{0,})\s*<\/ins>/g,'<ins data-ins="$1"></ins>').
- replace(/<ins>([\s\S]+?)<\/ins>/g,function(a,b){return('<#ins>'+b.replace(/<[^#]/g,'<#')+'</ins>');}).
+ replace(/<ins>([\s\S]+?)<\/ins>/g,function(a,b){return('<#ins>'+b.replace(/<(?!#)/g,'<#')+'</ins>');}).
  replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3><#/$4$2<#/$4').
  replace(/<del(.*?)>([\s\S]*?)<\/del>/g,function(a,b,c,d){i=(c.match(/data-ins=\"(.*?)\"/));i=(i&&i[1])?i[1]:0.25;
  c=c.replace(/<[\/]?.*?>/g,'');return('<del'+b+' data-del="'+c.replace(/\n/,'\\n')+'" data-ins="'+i+'">'+((c!='*')?c:'')+'</del>');}).
