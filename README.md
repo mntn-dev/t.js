@@ -64,7 +64,8 @@ Notes
 * <strong>Avoid</strong> additional HTML tags -- except <code>&lt;ins&gt;</code> -- inside <code>&lt;del&gt;</code>, instead, for basic styling, wrap or set attributes (<code>&lt;del class="red"&gt;text&lt;/del&gt;</code>)
 * You can comment-out since t.js also parses for this, e.g. <code>Foo&lt;!--&lt;del&gt;moo&lt;/del&gt;--&gt;bar</code> or, for delaying-only-invisibility, set <code>ins{display:none;}</code>
 * Unset <code>&lt;del&gt;</code>'s strike-through-style with CSS > <code>del{text-decoration:none;}</code>
-* Set content-elem's CSS to <code>{visibility:hidden;}</code> or <code>{display:none;}</code> to avoid flashing
+* Set content-elem's CSS to <code>{visibility:hidden;}</code> or <code>{display:none;}</code> to avoid flashing on page load
+* To prevent typing interruption on browser tab switching, include [HackTimer](https://github.com/turuslan/HackTimer) to your page (see [Issue #1](https://github.com/mntn-dev/t.js/issues/1))
 
 Event-handling
 ----
