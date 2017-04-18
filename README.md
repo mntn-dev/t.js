@@ -1,5 +1,5 @@
 
-<img height="250" width="250" src="http://mn.tn/dev/t.js/t.js.1.png"/>
+<img height="250" width="250" src="https://mn.tn/dev/t.js/t.js.1.png"/>
 
 jQuery.Typewriter w/ nice features
 ===
