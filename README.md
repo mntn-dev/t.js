@@ -4,7 +4,7 @@
 jQuery.Typewriter w/ nice features
 ===
 * t.js can type HTML, mistype, repeat, insert, delete, pause, delay and 'human-like'
-* Before getting started, checkout a <strong><a href="//rawgit.com/mntn-dev/t.js/master/demo.htm">demo</a></strong> (for more examples, visit <a href="http://mn.tn/t">http://mn.tn/t</a>)
+* Before getting started, checkout a <strong><a href="//rawgit.com/mntn-dev/t.js/master/demo.htm">demo</a></strong> (for more examples, visit <a href="https://mn.tn/t">https://mn.tn/t</a>)
 
 <pre style="font-size:x-small">
 &lt;script type="text/javascript" src="jquery.min.js"&gt;&lt;/script&gt;
