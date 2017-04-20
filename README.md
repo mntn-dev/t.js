@@ -20,8 +20,10 @@ delay:false,       // delays start for (N.)Ns
 mistype:false,     // mistyping: 1:N per char
 locale:'en',       // keyboard layout; 'en', 'de'
 caret:true,        // caret (HTML); default (TRUE): ▎
-blink:false,       // blink; if TRUE, 10ms or N ms
-tag:'span',        // wrapper (.t-container/.t-caret)
+blink:false,       // blink; if TRUE, 200ms or N ms
+blink_perm:true,   /* permanent caret blinking; if set to FALSE, 
+                      only when delayed (&lt;ins&gt;), paused or finished */
+tag:'span',        // wrapper tag (.t-container/.t-caret)
 repeat:false,      // if TRUE, infinite or N times
 
 //Callbacks
