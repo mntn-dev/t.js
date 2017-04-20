@@ -1,4 +1,4 @@
-/*t.js-0.6;(c)2017 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
+/*t.js-0.7;(c)2017 Mntn(r) <http://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;
 Licensed under the MIT License <http://mit-license.org/>;
 For documentation see http://github.com/mntn-dev/t.js or http://mn.tn/dev/t.js*/
 
@@ -49,7 +49,7 @@ return this.each(function(){
   if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
    t(_o.blink)&&_o.blink<10&&(_o.blink=10);
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
-   _o.blink&&c.append(z)&&(_$=setInterval(function(){oo.toggle();},(t(_o.blink))?_o.blink:_o.speed*((_o.speed_vary)?4:5)));
+   _o.blink&&c.append(z)&&(_$=setInterval(function(){oo.css({visibility:(oo.css('visibility')[0]=='h')?'visible':'hidden'});},(t(_o.blink))?_o.blink:_o.speed*((_o.speed_vary)?4:5)));
   }
 
 
