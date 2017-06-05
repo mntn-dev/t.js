@@ -1,0 +1,83 @@
+<!doctype html>
+
+<head>
+
+<title>t.js-demo</title>
+<meta charset="utf-8"/>
+<meta name="author" content="Mntn&reg; c/o Benjamin Lips"/>
+
+<style type="text/css">
+<!--
+
+::selection{background:aquamarine;color:white;}
+::-webkit-selection{background:aquamarine;color:white;}
+::-moz-selection{background:aquamarine;color:white;}
+
+
+
+body{background:floralwhite;}
+
+#t{position:absolute;top:20%;left:20%;visibility:hidden;font-family:monospace;line-height:17px;font-size:13px;}
+
+ins,del{text-decoration:none;}
+kbd{font-family:inherit;}
+
+.t-caret{font-size:inherit;color:hotpink;}
+
+-->
+</style>
+
+
+<script src="//cdn.jsdelivr.net/jquery/3/jquery.min.js"></script>
+<script src="t.js"></script>
+
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+
+
+$(function(){
+
+$('#t').t({
+ speed:70,
+ blink:400,
+ mistype:5,
+ pause_on_click:true
+});
+
+
+$('#t').on('click','#btn1',function(){
+ location.href='https://mntn-dev.github.io/t.js';
+});
+
+
+});
+
+
+
+/*]]>*/
+</script>
+
+
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+<div id="t"><strong>Hello.</strong><ins>1.5</ins> This is <em><!--<del style="color:red;text-decoration:underline;">d</del>-->t.js</em>, a <del>heavy<s>yellow,white</s></del><kbd>lightweight</kbd> jQuery typewriter script.
+<br/><button id="btn1">Learn more</button>
+
+</div>
+
+
+</body>
+
+
+</html>
