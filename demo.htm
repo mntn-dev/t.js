@@ -6,6 +6,8 @@
 <meta charset="utf-8"/>
 <meta name="author" content="Mntn&reg; c/o Benjamin Lips"/>
 
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"/>
+
 <style type="text/css">
 <!--
 
@@ -13,70 +15,60 @@
 ::-webkit-selection{background:aquamarine;color:white;}
 ::-moz-selection{background:aquamarine;color:white;}
 
-
-
-body{background:floralwhite;}
-
-#t{position:absolute;top:20%;left:20%;visibility:hidden;font-family:monospace;line-height:17px;font-size:13px;}
+body{background:lightyellow;color:mediumslateblue;}
+*{cursor:default;font-family:'vt323',monospace;line-height:2.5vw;font-size:2vw;white-space:pre-wrap;}
+#t{position:absolute;top:20%;left:50%;width:700px;margin-left:-350px;visibility:hidden;}
+a{color:mediumslateblue;text-decoration:none;border-bottom:1px solid aquamarine;}
+code{background:yellow;}
 
 ins,del{text-decoration:none;}
-kbd{font-family:inherit;}
-
-.t-caret{font-size:inherit;color:hotpink;}
+.t-caret{font-size:inherit;color:magenta;}
 
 -->
 </style>
 
-
-<script src="//cdn.jsdelivr.net/jquery/3/jquery.min.js"></script>
-<script src="t.js"></script>
-
+<script src="https://cdn.jsdelivr.net/jquery/3/jquery.min.js"></script>
+<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script> <!-- https://github.com/mntn-dev/t.js/blob/master/t.min.js -->
 
 
 <script type="text/javascript">
 /*<![CDATA[*/
 
-
 $(function(){
 
-$('#t').t({
- speed:70,
- blink:400,
- mistype:5,
- pause_on_click:true
-});
 
+ $('#t').t({
+  speed:35,
+  caret:'\u2589',
+  blink:400,
+  mistype:4, //1:4
+  pause_on_click:true
+ });
 
-$('#t').on('click','#btn1',function(){
- location.href='https://mntn-dev.github.io/t.js';
-});
 
 
 });
-
-
 
 /*]]>*/
 </script>
-
-
 
 
 </head>
 
 
 <body>
+<div id="t"><strong>Yay.</strong><ins>1.5</ins>
 
+I'm <em><del>r.j<ins>1</ins></del>t.js</em>, a <kbd>lightweight</kbd> jQuery typewriter script.
+I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong> support, also i can
+<ins>* mistype (<code>&lt;kbd&gt;</code>)</ins><ins>.5</ins>
+<ins>* delete (<code>&lt;del&gt;</code>)</ins><ins>.5</ins>
+<ins>* delay (numeric <code>&lt;ins&gt;</code>)</ins><ins>.5</ins>
+<ins>* insert (non-numeric <code>&lt;ins&gt;</code>)</ins><ins>.5</ins>
 
-
-
-
-<div id="t"><strong>Hello.</strong><ins>1.5</ins> This is <em><!--<del style="color:red;text-decoration:underline;">d</del>-->t.js</em>, a <del>heavy<s>yellow,white</s></del><kbd>lightweight</kbd> jQuery typewriter script.
-<br/><button id="btn1">Learn more</button>
+<a target="_blank" href="https://mntn-dev.github.io/t.js">Learn more</a>.
 
 </div>
-
-
 </body>
 
 
