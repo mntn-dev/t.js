@@ -1,4 +1,4 @@
-/*t.js-0.9;(c)2017 Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;MIT Licensed <https://mit-license.org/>;For documentation see https://mntn-dev.github.io/t.js*/
+/*t.js-0.9b;(c)2017 Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;MIT Licensed <https://mit-license.org/>;For documentation see https://mntn-dev.github.io/t.js/*/
 
 
 ;(function($){
@@ -22,7 +22,7 @@ return this.each(function(){
  
  if(_c=='add'&&c.data().t){
 
-  var a=_o,_o=$.extend(c.data()),$$$=c=$(':first',c),T=t(_o.typing,'f');
+  var a=_o,_o=$.extend({},c.data()),$$$=c=$(':first',c),T=t(_o.typing,'f');
   a='<'+_o.tag+' class="typing-add">'+a+'</'+_o.tag+'>';
   
 
