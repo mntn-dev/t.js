@@ -43,12 +43,25 @@ ins,del{text-decoration:none;}
 $(function(){
 
 
+
+
+
+var i=!1,c=new AudioContext();
+function beep(y=0.001,x=0.00001){if(i)o.stop(0);else i=!!1;o=c.createOscillator();
+g=c.createGain();o.connect(g);o.type='sine';g.connect(c.destination);o.start(0);
+g.gain.exponentialRampToValueAtTime(x,c.currentTime+y);}
+
+
+
+
+
  $('#t').t({
   speed:35,
   caret:'\u2589',
   blink:400,
   mistype:4, //1:4
-  pause_on_click:true
+  pause_on_click:true,
+  typing:function(){beep();}
  });
 
 
