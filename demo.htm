@@ -43,27 +43,52 @@ ins,del{text-decoration:none;}
 $(function(){
 
 
-
-
-
-var i=!1,c=new AudioContext();
-function beep(y=0.001,x=0.00001){if(i)o.stop(0);else i=!!1;o=c.createOscillator();
-g=c.createGain();o.connect(g);o.type='sine';g.connect(c.destination);o.start(0);
-g.gain.exponentialRampToValueAtTime(x,c.currentTime+y);}
-
+ var i=!1,c=new AudioContext();/*BEEP*/
+ function beep(y=0.001,x=0.00001){if(i)o.stop(0);else i=!!1;o=c.createOscillator();
+ g=c.createGain();o.connect(g);o.type='sine';g.connect(c.destination);o.start(0);
+ g.gain.exponentialRampToValueAtTime(x,c.currentTime+y);}
 
 
 
 
  $('#t').t({
-  speed:35,
-  caret:'\u2589',
-  blink:400,
-  mistype:4, //1:4
-  pause_on_click:true,
-  typing:function(){beep();}
+  delay:2,                // start-delay: 2s (default:false)
+  speed:35,               // 35ms (default:75)
+  speed_vary:false,       // adds lil' human-like speed variation (default:false)
+  caret:'\u2589',         // can be html too (default:\u258e)
+  blink:400,              // 400ms (default:false)
+  blink_perm:false,       // if FALSE, caret only blinks if paused/delayed/finished, if TRUE, permanent (default:false)
+  mistype:4,              // 1:4 per char; if set and <kbd> tag(s) detected, only there, else complete content (default:false)
+  locale:'en',            // 'de' for german keyboard layouts is also supported (default:'en')
+  pause_on_click:true,    // toggles typing-pause on elem click/tap (default:false)
+  repeat:0,               // if TRUE, infinite or N times (default:0)
+  
+  // init callback (ready-to-type)
+  init:function(elm){},        
+  // typing callback
+  typing:function(elm,chr,chrs_total,chrs_left){beep();},
+  // finished callback
+  fin:function(elm){}          
  });
 
+
+
+
+/*
+        
+Methods
+
+  $(elm).t('add',content);         // adds content (must be initialised and not typing [FIN])
+  $(elm).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted)
+
+Data/properties
+
+  $(elm).data().t;                 // TRUE if initialised
+  $(elm).data().is_typing;         // typing?
+  $(elm).data().pause;             // paused?
+
+*/
+  
 
 
 });
@@ -81,7 +106,7 @@ g.gain.exponentialRampToValueAtTime(x,c.currentTime+y);}
 <div id="t"><strong>Yay.</strong> <img style="height:1.5vw;width:auto;" src="https://twemoji.maxcdn.com/2/72x72/1f44b.png" alt=""/>
 ~~~~~~~~
 <ins>1.5</ins>I'm <em><del>r.j<ins>1</ins></del>t.js</em>, a <kbd>lightweight</kbd> jQuery typewriter script.
-I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong> support, also i can
+I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong> support, also i can:<ins>1</ins>
 <ins><span class="g">*</span> mistype (<code>&lt;kbd&gt;</code>)</ins><ins>.5</ins>
 <ins><span class="g">*</span> delete (<code>&lt;del&gt;</code>)</ins><ins>.5</ins>
 <ins><span class="g">*</span> delay (numeric <code>&lt;ins&gt;</code>)</ins><ins>.5</ins>
@@ -89,7 +114,7 @@ I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong
 
 <a target="_blank" href="https://mntn-dev.github.io/t.js">Learn more</a>.
 
-<ins>5</ins>(Open console: <span style="border-bottom:1px dashed magenta;">$('#t').t('add',<code>content..</code>);</span> )
+<ins>5</ins>(Open console: <span style="border-bottom:1px dashed magenta;">$('#t').t('add',<code><del>foo-boo-moo</del>content..</code>);</span> )
 
 </div>
 
