@@ -1,20 +1,19 @@
-/*t.js-0.9b;(c)2014-2018 Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--AT--mn.tn>;MIT Licensed <https://mit-license.org/>;For documentation see https://mntn-dev.github.io/t.js/*/
-
+/*t.js-1.0;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation see <https://mntn-dev.github.io/t.js/>*/
 
 ;(function($){
 
-$.fn.t=function($c,$o){
+$.fn.t=function($c,$o){return this.each(function(){
 
-return this.each(function(){
-
- var _o=$o,_c=$c,c=$(this),o,oo,P='pause',tt=!1,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
+ var _o=$o,_c=$c,c=$(this),o,oo,P='paused',tt=!1,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
  q2='12qwertzuiop\u00fc+asdfghjkl\u00f6\u00e4#<yxcvbnm,.-!"§$%&/(()=?1234567890\u00df*p+',t=function(_1,_2){
  return $.type(_1)[0]==(_2||'n');},f=function(){g=$.grep(d,function(f){return(f[0]=='&'||!f[1]);}).length-1;return(g>-1)?g:0;},
- b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));};
+ b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
+ B={c:0,beep:function(){if(B.c==0)B.c=$('html').data().__TAC;if(B.o)B.o.stop();B.o=B.c.createOscillator();B.o.frequency.setValueAtTime(1,B.c.currentTime);B.g=B.c.createGain();B.o.connect(B.g);
+ B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};
 
  _c===''&&(_c='<del>*</del>');
- if(c.data().is_typing){if(_c==P){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data('blinking',(oo_)?1:0);}
- return(this);}else{if(_c==P)return(this);c.data('is_typing',1);}
+ if(c.data().is_typing){if(_c==P.slice(0,-1)){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data('blinking',(oo_)?1:0);}
+ return(this);}else{if(_c==P.slice(0,-1))return(this);c.data('is_typing',1);}
  
  t(_c,'o')&&(_o=_c);
  
@@ -31,7 +30,7 @@ return this.each(function(){
   if(_c=='add'){_c=_o;_o={};}
 
 
-  var _o=$.extend({t:!!1,delay:!1,speed:75,speed_vary:!1,caret:'\u258e',tag:'span',blink:!1,blink_perm:!1,repeat:-3,pause_on_click:!1,
+  var _o=$.extend({t:!!1,delay:!1,speed:75,speed_vary:!1,caret:'\u258e',tag:'span',blink:!!1,beep:!1,blink_perm:!1,repeat:-3,pause_on_click:!1,
   wrap:!1,mistype:!1,locale:'en',init:!1,typing:!1,fin:!1},((_o)?_o:c.data())),
   oo=!1,a=!1,k,d,dl,$$,$$$,T;
 
@@ -46,9 +45,12 @@ return this.each(function(){
    c.parent().data('t_wrap',1);
   }
 
+  if(!t(_o.beep,'b'))_o.beep=!1;
+  if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext||window.webkitAudioContext)?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
+  if(_o.repeat===!1)_o.repeat=-3;  
  
   if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
-   (_o.blink===!!1)&&(_o.blink=2e2);(t(_o.blink))&&(_o.blink<50)&&(_o.blink=50);(!t(_o.blink))&&(_o.blink=!1);
+   (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
    
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
    _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(($$$.parent().data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},(t(_o.blink))?_o.blink:_o.speed*((_o.speed_vary)?4:5))));
@@ -78,7 +80,7 @@ return this.each(function(){
  /<kbd.*?>/i.test(d=String((a||d)))&&(c.parent().data('kbd',j_=1))&&(c.parent().data('mistype',((!c.parent().data('mistype')?
  _j=10:_j=c.parent().data().mistype))))&&(_o.mistype=_j)&&(_o.kbd=j_?j_:!1);
  d=d.replace(/(.*?)[\u200b]+$/,'$1'). replace(/<\!\-\-([\s\S]+?)\-\->/g,'$1').replace(/<ins>([^0-9])<\/ins>/g,'$1').
- replace(/<(embed|command|col|wbr|img|br|input|hr)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>\s*(\d*[.]?\d*)\s*(<\/ins>)/g,'<ins data-ins="$1"></ins>').
+ replace(/<(embed|command|col|wbr|img|br|input|hr|area|source|track|keygen|param)(.*?)[\/]?>/g,'<#$1$2/>').replace(/<ins>\s*(\d*[.]?\d*)\s*(<\/ins>)/g,'<ins data-ins="$1"></ins>').
  replace(/<ins(.*?)>([\s\S]*?)(<\/ins>)/g,function(a,b,c){return('<#ins'+b+'>'+c.replace(/<(?!#)/g,'<#')+'<#/ins>'+(!c?'</ins>':''));}).
  replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3><#/$4$2</$4').
  replace(/<del(.*?)>([\s\S]*?)<\/del>/g,function(a,b,c,d){s=c.match(/<s>\s*(.*?)\s*<\/s>/i);s=(s&&s[0])?(' data-s=\"'+(s[1]||'1')+'"'):'';i=(c.match(/data-ins=\"(.*?)\"/));i=(i&&i[1])?i[1]:((s=='')?.25:.75);
@@ -96,7 +98,7 @@ return this.each(function(){
   if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:1);return;}k=(c.data().ins)?'</>':d.shift();}   
   else if(_o.speed_vary&&~~(Math.random()*4)){tt=!tt;return;}b(0);
 
-  if(c.data().del){if(c.data().s&&!k[0])c.text('');
+  if(c.data().del){$$$.parent().data().beep===!!1&&B.beep();if(c.data().s&&!k[0])c.text('');
   o=String(c.data().del);!t(k,'a')&&k[1]=='/'&&(k=o.replace(/\\n/g,'\n').split([]));
   if(t(k,'a')){if(!(p=k.pop())){if(o=='*'){$$$.wrapInner($('<'+_o.tag+'/>',{'class':'typing-0','style':'display:none;'}));c=c.parent();
   if(a){d=$.merge(['<'+_o.tag+' class="typing-add"></'+_o.tag+'>'],d,['</'+_o.tag+'>']);c=c.parent();}}c=c.parent();
@@ -105,7 +107,7 @@ return this.each(function(){
   c.data().del.substr(k.length)+'</mark>');}else{c.text(k.join([]));}tt=!tt;return;}}}
 
   while(k[1]=='/'){c=c.parent();k=d.shift()||'';}
-  while(1){c.append(k);T&&_o.typing($$$.parent(),k,f(),dl);!/<ins.*?>[\s\S]+</.test(k)&&/></.test(k)&&(c=c.find(':last'));
+  while(1){$$$.parent().data().beep===!!1&&B.beep();c.append(k);T&&_o.typing($$$.parent(),k,f(),dl);!/<ins.*?>[\s\S]+</.test(k)&&/></.test(k)&&(c=c.find(':last'));
   if(d[0]&&/<\w+/.test(d[0]))k=d.shift();else break;}
   
   if(!(k=d.shift())){clearInterval($$);$$$.parent().removeData(['is_typing',P]);
@@ -119,4 +121,9 @@ return this.each(function(){
  },_o.speed);
 
 
-});}})(jQuery);
+});},
+
+$.fn.a=function($c){return this.each(function(){if($(this).data().t)$(this).t('add',$c);});},
+$.fn.p=function($_){return this.each(function(){if($(this).data().is_typing)$(this).t('pause',($_)?(($_===!1||$_===!!1)?$_:undefined):undefined);});}
+
+})(jQuery);
