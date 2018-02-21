@@ -2,7 +2,7 @@
 
 <head>
 
-<title>t.js-demo</title>
+<title>t.js/demo.htm</title>
 <meta charset="utf-8"/>
 <meta name="author" content="Mntn&reg; c/o Benjamin Lips"/>
 
@@ -16,8 +16,8 @@
 ::-moz-selection{background:aquamarine;color:white;}
 
 body{background:lightyellow;color:mediumslateblue;}
-*{cursor:default;font-family:'vt323',monospace;line-height:3.5vw;font-size:3vw;white-space:pre-wrap;padding:0;outline:0;margin:0;}
-#t{position:absolute;top:20%;left:50%;width:600px;margin-left:-300px;visibility:hidden;}
+*{cursor:default;font-family:'vt323',monospace;line-height:3.5vw;font-size:3vw;padding:0;outline:0;margin:0;}
+#t{position:absolute;bottom:20%;left:50%;width:600px;margin-left:-300px;visibility:hidden;white-space:pre-wrap;}
 a{color:mediumslateblue;text-decoration:none;border-bottom:1px solid aquamarine;}
 code{background:yellow;}
 
@@ -26,51 +26,51 @@ code{background:yellow;}
 ins,del{text-decoration:none;}
 .t-caret{font-size:inherit;color:magenta;}
 
-
-
 @media(max-width:800px){#t{width:400px;margin-left:-200px;}}
 
 -->
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script> <!-- https://github.com/mntn-dev/t.js/blob/master/t.min.js -->
+<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script>
 
 
 <script type="text/javascript">
-/*<![CDATA[*/
+//<![CDATA[
 
 $(function(){
 
 
- var i=!1,c=new AudioContext();/*BEEP*/
- function beep(y=0.001,x=0.00001){if(i)o.stop(0);else i=!!1;o=c.createOscillator();
- g=c.createGain();o.connect(g);o.type='sine';g.connect(c.destination);o.start(0);
- g.gain.exponentialRampToValueAtTime(x,c.currentTime+y);}
-
-
-
 
  $('#t').t({
-  delay:2,                // start-delay: 2s (default:false)
-  speed:35,               // 35ms (default:75)
-  speed_vary:false,       // adds lil' human-like speed variation (default:false)
-  caret:'\u2589',         // can be html too (default:\u258e)
-  blink:400,              // 400ms (default:false)
-  blink_perm:false,       // if FALSE, caret only blinks if paused/delayed/finished, if TRUE, permanent (default:false)
-  mistype:4,              // 1:4 per char; if set and <kbd> tag(s) detected, only there, else complete content (default:false)
-  locale:'en',            // 'de' for german keyboard layouts is also supported (default:'en')
-  pause_on_click:true,    // toggles typing-pause on elem click/tap (default:false)
-  repeat:0,               // if TRUE, infinite or N times (default:0)
+  
+  delay:2,                // start delay in seconds [default:0]
+  
+  speed:55,               // typing speed (ms) [default:75]
+  speed_vary:false,      // 'human like' speed variation [default:false]
+  
+  beep:true,             // beep while typing (Web Audio API) [default:false]
+  
+  mistype:false,         // mistype rate: 1:N per char [default:false]
+  locale:'en',            // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+  
+  caret:'\u2589',         // caret content; can be html too [default:true (\u258e)]
+  blink:true,            // blink-interval in ms; if TRUE, speed*3  [default:true]
+  blink_perm:false,      // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+
+  repeat:0,               // repeat typing: if TRUE, infinite or N times [default:0]
+  tag:'span',             // wrapper tag (.t-container, .t-caret) [default:'span']
+  pause_on_click:true,   // pauses/continues typing on click/tap (elm) [default:false]
+
   
   // init callback (ready-to-type)
   init:function(elm){},        
   // typing callback
-  typing:function(elm,chr,chrs_total,chrs_left){beep();},
+  typing:function(elm,chr_or_elem,left,total){},
   // finished callback
   fin:function(elm){}          
+ 
  });
-
 
 
 
@@ -78,14 +78,14 @@ $(function(){
         
 Methods
 
-  $(elm).t('add',content);         // adds content (must be initialised and not typing [FIN])
-  $(elm).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted)
+  $(elm).t('add',content);         // adds content; shorthand: $(elm).a(content);
+  $(elm).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted); shorthand: $(elm).p([true/false]);
 
 Data/properties
 
   $(elm).data().t;                 // TRUE if initialised
-  $(elm).data().is_typing;         // typing?
-  $(elm).data().pause;             // paused?
+  $(elm).data().is_typing;                 // typing
+  $(elm).data().paused;                    // paused
 
 */
   
@@ -93,7 +93,7 @@ Data/properties
 
 });
 
-/*]]>*/
+//]]>
 </script>
 
 
@@ -114,12 +114,13 @@ I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong
 
 <a target="_blank" href="https://mntn-dev.github.io/t.js">Learn more</a>.
 
-<ins>5</ins>(Open console: <span style="border-bottom:1px dashed magenta;">$('#t').t('add',<code><del>foo-boo-moo</del>content..</code>);</span> )
+<ins>5</ins>(Open console:<br/><span style="border-bottom:1px dashed magenta;">$('#t').a('foo-moo');</span> )
 
 </div>
 
+<br/>
+
 
 </body>
-
 
 </html>
