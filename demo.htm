@@ -47,20 +47,20 @@ $(function(){
   delay:2,                // start delay in seconds [default:0]
   
   speed:55,               // typing speed (ms) [default:75]
-  speed_vary:false,      // 'human like' speed variation [default:false]
+  speed_vary:false,       // 'human like' speed variation [default:false]
   
-  beep:true,             // beep while typing (Web Audio API) [default:false]
+  beep:true,              // beep while typing (Web Audio API) [default:false]
   
-  mistype:false,         // mistype rate: 1:N per char [default:false]
+  mistype:false,          // mistype rate: 1:N per char [default:false]
   locale:'en',            // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
   
   caret:'\u2589',         // caret content; can be html too [default:true (\u258e)]
-  blink:true,            // blink-interval in ms; if TRUE, speed*3  [default:true]
-  blink_perm:false,      // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+  blink:true,             // blink-interval in ms; if TRUE, speed*3  [default:true]
+  blink_perm:false,       // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
 
   repeat:0,               // repeat typing: if TRUE, infinite or N times [default:0]
   tag:'span',             // wrapper tag (.t-container, .t-caret) [default:'span']
-  pause_on_click:true,   // pauses/continues typing on click/tap (elm) [default:false]
+  pause_on_click:true,    // pauses/continues typing on click/tap (elm) [default:false]
 
   
   // init callback (ready-to-type)
@@ -114,7 +114,7 @@ I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong
 
 <a target="_blank" href="https://mntn-dev.github.io/t.js">Learn more</a>.
 
-<ins>5</ins>(Open console:<br/><span style="border-bottom:1px dashed magenta;">$('#t').a('foo-moo');</span> )
+<ins>5</ins>(Open console:<br/><span style="border-bottom:1px dashed magenta;">$('#t').a('&lt;hr/&gt;foo&lt;hr/&gt;moo');</span> )
 
 </div>
 
