@@ -9,8 +9,8 @@ $.fn.t=function($c,$o){return this.each(function(){
  return $.type(_1)[0]==(_2||'n');},f=function(){g=$.grep(d,function(f){return(f[0]=='&'||!f[1]);}).length-1;return(g>-1)?g:0;},
  b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
  B={c:0,beep:function(){if(B.c==0)B.c=$('html').data().__TAC;if(B.o)B.o.stop();B.o=B.c.createOscillator();B.o.frequency.setValueAtTime(1,B.c.currentTime);B.g=B.c.createGain();B.o.connect(B.g);
- B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};
-
+ B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};if(_c=='beep'&&!c.data().is_typing&&$('html').data().__TAC){B.beep();return(this);}
+ 
  _c===''&&(_c='<del>*</del>');
  if(c.data().is_typing){if(_c==P.slice(0,-1)){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data('blinking',(oo_)?1:0);}
  return(this);}else{if(_c==P.slice(0,-1))return(this);c.data('is_typing',1);}
@@ -18,6 +18,7 @@ $.fn.t=function($c,$o){return this.each(function(){
  t(_c,'o')&&(_o=_c);
  
  if(/t\-/.test(c.attr('class')))return(this);
+  
  
  if(_c=='add'&&c.data().t){
 
@@ -124,6 +125,8 @@ $.fn.t=function($c,$o){return this.each(function(){
 });},
 
 $.fn.a=function($c){return this.each(function(){if($(this).data().t)$(this).t('add',$c);});},
-$.fn.p=function($_){return this.each(function(){if($(this).data().is_typing)$(this).t('pause',($_)?(($_===!1||$_===!!1)?$_:undefined):undefined);});}
+$.fn.p=function($_){return this.each(function(){if($(this).data().is_typing)$(this).t('pause',($_)?(($_===!1||$_===!!1)?$_:undefined):undefined);});},
+$.fn.b=function($_){return this.each(function(){$(this).t('beep');});}
+
 
 })(jQuery);
