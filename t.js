@@ -49,8 +49,8 @@ $.fn.t=function($c,$o){return this.each(function(){
   if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext||window.webkitAudioContext)?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
   if(_o.repeat===!1)_o.repeat=-3;  
  
-  if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
-   (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
+  if(_o.caret===!!1)_o.caret='\u258e';if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
+  (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
    
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
    _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(($$$.parent().data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},(t(_o.blink))?_o.blink:_o.speed*((_o.speed_vary)?4:5))));
