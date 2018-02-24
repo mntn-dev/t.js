@@ -31,8 +31,8 @@ ins,del{text-decoration:none;}
 -->
 </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 3.3.1 -->
+<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script> <!-- 1.0 -->
 
 
 <script type="text/javascript">
@@ -80,12 +80,19 @@ Methods
 
   $(elm).t('add',content);         // adds content; shorthand: $(elm).a(content);
   $(elm).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted); shorthand: $(elm).p([true/false]);
+  $(elm).t('beep');                // manual beepin' (initialised/not-typing); shorthand: $(elm).b();
+
 
 Data/properties
 
   $(elm).data().t;                 // TRUE if initialised
   $(elm).data().is_typing;                 // typing
   $(elm).data().paused;                    // paused
+
+
+# How to stop caret blinking (e.g., if finished)?
+-> https://github.com/mntn-dev/t.js/issues/5#issuecomment-340739907
+
 
 */
   
