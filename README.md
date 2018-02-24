@@ -1,4 +1,3 @@
-# t.js
-<img src="https://mntn-dev.github.io/t.js/t.js.png" height="350" width="350"/>
-t.js: [docs/demos](https://mntn-dev.github.io/t.js/)
-Checkout a simple [demo](https://rawgit.com/mntn-dev/t.js/master/demo.htm)
+<mg src="https://mntn-dev.github.io/t.js/t.js.png" style="height:200px;width:auto;" alt=""/>
+t.js: <a href=""https://mntn-dev.github.io/t.js/" target="_blank">docs/demos</a>
+(Checkout a simple <a href="https://rawgit.com/mntn-dev/t.js/master/demo.htm" target="_blank">demo</a>)
