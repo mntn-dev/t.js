@@ -93,6 +93,20 @@ Data/properties
 # How to stop caret blinking (e.g., if finished)?
 -> https://github.com/mntn-dev/t.js/issues/5#issuecomment-340739907
 
+--------
+
+# "Hypertyping Markup Language" Cheatsheet:
+
+<del>*</del> -> clears everything typed before (still stored in case of settingsrepeating)
+<del>foo</del> -> deletes 'foo' (by default, t.js delays 0.25s before removing)
+<del>foo<ins>2</ins></del> -> custom del-delay: numeric-filled <ins> inside <del>
+<del>select me<s>red,white</s></del> -> text selection: <s> inside <del> (comma seperated background/forground values, or .class name)
+
+<ins>2.5</ins> -> stops typing for 2.5 seconds (numeric-filled)
+<ins>content to <u>insert</u></ins> -> inserts instantly (non-numeric)
+
+<kbd>some <strong>typing text</strong></kbd> -> will apply setting's mistype[=1:N] rate here
+
 
 */
   
