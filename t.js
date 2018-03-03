@@ -1,10 +1,10 @@
-/*t.js-1.0;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.1;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 ;(function($){
 
 $.fn.t=function($c,$o){return this.each(function(){
 
- var _o=$o,_c=$c,c=$(this),o,oo,P='paused',tt=!1,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
+ var _o=$o,_c=$c,c=$(this),o,oo,P='paused',p=-1,tt=!1,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
  q2='12qwertzuiop\u00fc+asdfghjkl\u00f6\u00e4#<yxcvbnm,.-!"§$%&/(()=?1234567890\u00df*p+',t=function(_1,_2){
  return $.type(_1)[0]==(_2||'n');},f=function(){g=$.grep(d,function(f){return(f[0]=='&'||!f[1]);}).length-1;return(g>-1)?g:0;},
  b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
@@ -12,7 +12,7 @@ $.fn.t=function($c,$o){return this.each(function(){
  B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};if(_c=='beep'&&!c.data().is_typing&&$('html').data().__TAC){B.beep();return(this);}
  
  _c===''&&(_c='<del>*</del>');
- if(c.data().is_typing){if(_c==P.slice(0,-1)){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data('blinking',(oo_)?1:0);}
+ if(c.data().is_typing){if(_c==P.slice(0,-1)){c.data(P,((t(_o,'b'))?oo_=_o:((c.data(P))?(oo_=!1):(oo_=!!1))));c.data().blink&&c.data('blinking',oo_);}
  return(this);}else{if(_c==P.slice(0,-1))return(this);c.data('is_typing',1);}
  
  t(_c,'o')&&(_o=_c);
@@ -31,7 +31,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   if(_c=='add'){_c=_o;_o={};}
 
 
-  var _o=$.extend({t:!!1,delay:!1,speed:75,speed_vary:!1,caret:'\u258e',tag:'span',blink:!!1,beep:!1,blink_perm:!1,repeat:-3,pause_on_click:!1,
+  var _o=$.extend({t:!!1,delay:!1,speed:50,speed_vary:!1,caret:'\u258e',tag:'span',blink:!!1,beep:!1,blink_perm:!1,repeat:-3,pause_on_click:!1,
   wrap:!1,mistype:!1,locale:'en',init:!1,typing:!1,fin:!1},((_o)?_o:c.data())),
   oo=!1,a=!1,k,d,dl,$$,$$$,T;
 
@@ -54,12 +54,12 @@ $.fn.t=function($c,$o){return this.each(function(){
   (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
    
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
-   _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(($$$.parent().data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},(t(_o.blink))?_o.blink:_o.speed*((_o.speed_vary)?4:5))));
+   _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(($$$.parent().data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},_o.blink)));
   }
 
   _o.blink||(c.data().bi&&clearInterval(c.data().bi)&&c.removeData('bi'));
   (!t(_o.blink_perm,'b'))&&(_o.blink_perm=!!1);
-  _o.speed=(!t(_o.speed)||_o.speed<1e1)?~~1e1:_o.speed;
+  _o.speed=(!t(_o.speed)||_o.speed<10)?10:_o.speed;
   _o.speed_vary&&(_o.speed/=2.5);
   _o.mistype>1||(_o.mistype=!1);
   c.data(_o);
@@ -69,7 +69,7 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   $$$=c=$(':first',c);
   d=(t(_c,'s'))?_c:c.html();d==''&&(d=z);c.empty();$$$.parent().show().css({visibility:'visible'});
-  t(_o.delay)&&_o.delay>0&&(k=~~((_o.delay*1e3)/_o.speed))&&_o.blink_perm||(c.parent().data('blinking',1));
+  t(_o.delay)&&_o.delay>0&&(k=~~((_o.delay*1e3)/_o.speed))&&_o.blink_perm||(b(1));
 
   T=t(_o.typing,'f');
   (_o.pause_on_click===!!1)&&(c.parent().off('click').click(function(_){if($(_.target).data().click!='1')$(this).t('pause');}));
@@ -94,9 +94,9 @@ $.fn.t=function($c,$o){return this.each(function(){
 
  $$=setInterval(function(){
 
-  if($$$.parent().data(P))return;if(tt)return;tt=!tt;
+  if($$$.parent().data(P)){p=1;return;}if(tt)return;tt=!tt;
 
-  if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:1);return;}k=(c.data().ins)?'</>':d.shift();}   
+  if(t(k)){if(--k>0){tt=!tt;b((c.data().ins<=.25)?0:(p==1)?(p=-1):1);return;}k=(c.data().ins)?'</>':d.shift();}   
   else if(_o.speed_vary&&~~(Math.random()*4)){tt=!tt;return;}b(0);
 
   if(c.data().del){$$$.parent().data().beep===!!1&&B.beep();if(c.data().s&&!k[0])c.text('');
