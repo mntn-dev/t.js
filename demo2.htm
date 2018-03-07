@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title>t.js/demo2.htm</title>
+<meta charset="utf-8"/>
+<meta name="author" content="Mntn&reg; c/o Benjamin Lips"/>
+
+
+<style type="text/css">
+<!--
+
+@font-face{font-family:'a';src:url('https://mntn-dev.github.io/_/pxplus-amstradpc1512.ttf') format('truetype');}
+
+::selection{background:aquamarine;color:white;}
+::-webkit-selection{background:aquamarine;color:white;}
+::-moz-selection{background:aquamarine;color:white;}
+
+body{background:whitesmoke;}
+*{padding:0;border:0;margin:0;outline:0;line-height:1.3vw;font-size:1vw;font-family:a,monospace;white-space:pre-wrap;}
+#t{position:absolute;left:10%;top:10%;width:80%;height:auto;}
+#t,#t *{display:inline;}
+
+.t-caret{color:cyan;}
+
+#s_bar{position:absolute;top:0;left:0;height:20px;width:0;background:blue;}
+#s_bar-bg{position:absolute;top:0;left:0;height:20px;width:100%;background:#eee;}
+
+
+i{color:tomato;}
+b{color:blue;}
+h2,h3,h4{border-bottom:1px solid magenta;}
+
+
+-->
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 3.3.1 -->
+<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script> <!-- 1.1 -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+function w(){
+$.getJSON('https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exsentences=3&generator=random&origin=*',function(_){
+$.each(_.query.pages,function(p){$(document).attr('title','#'+p);
+
+  $('#t').t((_.query.pages[p].extract.replace(/(File:.*?\.jpg)/g,'<mark>$1</mark>').replace(/(<ul[\s\S]+<\/ul>)/g,'<ins>$1</ins>')||'<mark>err:</mark> no extract for #'+p)+'<ins>3</ins>',
+  {speed:30,beep:true,caret:'\u2588',pause_on_click:true,typing:function(elm,chr_or_elm,left,total){
+    $('#s_bar').css({width:((left*100)/total)+'%'});},fin:function(){w();}});})});
+}
+
+
+$(function(){
+
+$(window).on('blur focus',function(e){if($('#t').data().t)$('#t').p((e.type=='blur')?true:false);});
+
+w();
+
+});
+
+
+//]]>
+</script>
+
+</head>
+
+
+
+<body>
+<div id="s_bar-bg"></div><div id="s_bar"></div><div id="t"></div>
+</body>
+
+
+</html>
