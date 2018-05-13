@@ -1,5 +1,17 @@
 <img src="https://mntn-dev.github.io/t.js/t.js.png" height="300" width="300" alt=""/><br/>
 
+Nice features 👌
+---
+* full <code>HTML</code> support
+* beep
+* Hypertypin' Markup Language (__HTyML__)
+  * deleting (<code>&lt;del&gt;</code>)
+  * mistyping (<code>&lt;kbd&gt;</code> / en/de layout)
+  * delaying (numeric-filled <code>&lt;ins&gt;</code>)
+  * instant inserts (non-numeric <code>&lt;ins&gt;</code>)
+  
+
+
 Docs/demos
 ---
 * <a href="https://mntn-dev.github.io/t.js/" target="_blank">@github.io</a>
