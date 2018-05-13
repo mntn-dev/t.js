@@ -4,7 +4,7 @@ Nice features 👌
 ---
 * full <code>HTML</code> support
 * beep-beep
-* Hypertypin' Markup Language (__HTyML__)
+* Hypertypin' Markup Language (__HTyML__):
   * deleting (<code>&lt;del&gt;</code>)
   * mistyping (<code>&lt;kbd&gt;</code> / en/de layout)
   * delaying (numeric-filled <code>&lt;ins&gt;</code>)
