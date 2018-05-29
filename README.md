@@ -6,7 +6,7 @@ Nice features 👌
 * beep-beep
 * Hypertypin' Markup Language (__HTyML__):
   * deleting (<code>&lt;del&gt;</code>)
-  * mistyping (<code>&lt;kbd&gt;</code> &mdash; optimized for <kbd/>en</kbd> and <kbd>de</kbd> layout)
+  * mistyping (<code>&lt;kbd&gt;</code> &mdash; optimized for <kbd title="english">en</kbd> and <kbd title="german">de</kbd> layout)
   * delaying (numeric-filled <code>&lt;ins&gt;</code>)
   * instant inserts (non-numeric <code>&lt;ins&gt;</code>)
   
