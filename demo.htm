@@ -67,7 +67,7 @@ $(function(){
   // init callback (ready-to-type)
   init:function(elm){},        
   // typing callback
-  typing:function(elm,chr_or_elem,left,total){},
+  typing:function(elm,chr_or_elm,left,total){},
   // finished callback
   fin:function(elm){}          
  
@@ -98,7 +98,7 @@ Data/properties
 
 # "Hypertyping Markup Language" Cheatsheet:
 
-<del>*</del> -> clears everything typed before (still stored in case of settingsrepeating)
+<del>*</del> -> clears everything typed before (still stored in case of repeating [repeat:N])
 <del>foo</del> -> deletes 'foo' (by default, t.js delays 0.25s before removing)
 <del>foo<ins>2</ins></del> -> custom del-delay: numeric-filled <ins> inside <del>
 <del>select me<s>red,white</s></del> -> text selection: <s> inside <del> (comma seperated background/forground values, or .class name)
@@ -106,7 +106,7 @@ Data/properties
 <ins>2.5</ins> -> stops typing for 2.5 seconds (numeric-filled)
 <ins>content to <u>insert</u></ins> -> inserts instantly (non-numeric)
 
-<kbd>some <strong>typing text</strong></kbd> -> will apply setting's mistype[=1:N] rate here
+<kbd>some <strong>typing text</strong></kbd> -> will apply setting's mistype[=1:N] rate here (will be 10 if unset)
 
 
 */
