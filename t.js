@@ -1,4 +1,4 @@
-/*t.js-1.1;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.2;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 ;(function($){
 
@@ -47,7 +47,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   }
 
   if(!t(_o.beep,'b'))_o.beep=!1;
-  if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext||window.webkitAudioContext)?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
+  if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext=(window.AudioContext||window.webkitAudioContext))?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
   if(_o.repeat===!1)_o.repeat=-3;  
  
   if(_o.caret===!!1)_o.caret='\u258e';if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
