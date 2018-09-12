@@ -33,7 +33,7 @@ ins,del{text-decoration:none;}
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 3.3.1 -->
-<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script> <!-- 1.2 -->
+<script src="https://rawgit.com/mntn-dev/t.js/master/t.min.js"></script> <!-- 1.3 -->
 
 
 <script type="text/javascript">
@@ -45,24 +45,24 @@ $(function(){
 
  $('#t').t({
   
-  delay:2,                // start delay in seconds [default:0]
+  delay:2,                   // start delay in seconds [default:0]
   
-  speed:55,               // typing speed (ms) [default:75]
-  speed_vary:false,       // 'human like' speed variation [default:false]
+  speed:55,                  // typing speed (ms) [default:75]
+  speed_vary:false,          // 'human like' speed variation [default:false]
   
-  beep:true,              // beep while typing (Web Audio API) [default:false]
+  beep:true,                 // beep while typing (Web Audio API) [default:false]
   
-  mistype:false,          // mistype rate: 1:N per char [default:false]
-  locale:'en',            // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+  mistype:false,             // mistype rate: 1:N per char [default:false]
+  locale:'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
   
-  caret:'\u2589',         // caret content; can be html too [default:true (\u258e)]
-  blink:true,             // blink-interval in ms; if TRUE, speed*3  [default:true]
-  blink_perm:false,       // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+  caret:'\u2589',            // caret content; can be html too [default:true (\u258e)]
+  blink:true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+  blink_perm:false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
 
-  repeat:0,               // repeat typing: if TRUE, infinite or N times [default:0]
-  tag:'span',             // wrapper tag (.t-container, .t-caret) [default:'span']
-  pause_on_click:true,    // pauses/continues typing on click/tap (elm) [default:false]
-
+  repeat:0,                  // repeat typing: if TRUE, infinite or N times [default:0]
+  tag:'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+  pause_on_click:true,       // pauses/continues typing on click/tap (elm) [default:false]
+  pause_on_tab_switch:true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
   
   // init callback (ready-to-type)
   init:function(elm){},        
