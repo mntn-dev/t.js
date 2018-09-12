@@ -3,9 +3,11 @@
 
 Latest changes
 ---
-* v1.3 &mdash; added `pause_on_tab_switch` setting ([Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API))
-* v1.2 &mdash; `beep`-relevant __AudioContext__ fix ([Safari-required](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html#//apple_ref/doc/uid/TP40009523-CH6-SW2) `webkit` prefix)
-
+<pre>
+* v1.3.1  &mdash; `pause_on_tab_switch` minor fix: keep previously paused type elm paused if window/tab is reactivated
+* v1.3    &mdash;  added `pause_on_tab_switch` setting ([Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API))
+* v1.2    &mdash; `beep`-relevant __AudioContext__ fix ([Safari-required](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html#//apple_ref/doc/uid/TP40009523-CH6-SW2) `webkit` prefix)
+</pre>
 
 
 Nice features 👌
@@ -24,3 +26,8 @@ Docs/demos
 ---
 * <a href="https://mntn-dev.github.io/t.js/" target="_blank">@github.io</a>
 * <a href="https://rawgit.com/mntn-dev/t.js/master/demo.htm" target="_blank">@demo.htm</a> / <a href="https://rawgit.com/mntn-dev/t.js/master/demo2.htm" target="_blank">@demo2.htm</a>
+
+
+License
+---
+MIT
