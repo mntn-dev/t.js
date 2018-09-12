@@ -1,4 +1,5 @@
-/*t.js-1.2;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.3;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+
 
 ;(function($){
 
@@ -31,7 +32,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   if(_c=='add'){_c=_o;_o={};}
 
 
-  var _o=$.extend({t:!!1,delay:!1,speed:50,speed_vary:!1,caret:'\u258e',tag:'span',blink:!!1,beep:!1,blink_perm:!1,repeat:-3,pause_on_click:!1,
+  var _o=$.extend({t:!!1,delay:!1,speed:50,speed_vary:!1,caret:'\u258e',tag:'span',blink:!!1,beep:!1,blink_perm:!1,repeat:-3,pause_on_click:!1,pause_on_tab_switch:0,
   wrap:!1,mistype:!1,locale:'en',init:!1,typing:!1,fin:!1},((_o)?_o:c.data())),
   oo=!1,a=!1,k,d,dl,$$,$$$,T;
 
@@ -73,7 +74,10 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   T=t(_o.typing,'f');
   (_o.pause_on_click===!!1)&&(c.parent().off('click').click(function(_){if($(_.target).data().click!='1')$(this).t('pause');}));
+  if(_o.pause_on_tab_switch===!!1){if(t($('html').data().__TAB,'u')){$('html').data('__TAB',1);$(document).on('visibilitychange',function(){$('.t-container').parent().each(function(){$(this).p((($(document).attr('visibilityState').charAt(0)=='h')?!!1:!1));});});}}
+  else if(_o.pause_on_tab_switch===!1&&$('html').data().__TAB){$('html').removeData('__TAB');$(document).off('visibilitychange');}
   
+
 
  }
 
