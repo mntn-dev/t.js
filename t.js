@@ -1,4 +1,4 @@
-/*t.js-1.3;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.3.1;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 
 ;(function($){
@@ -74,7 +74,7 @@ $.fn.t=function($c,$o){return this.each(function(){
 
   T=t(_o.typing,'f');
   (_o.pause_on_click===!!1)&&(c.parent().off('click').click(function(_){if($(_.target).data().click!='1')$(this).t('pause');}));
-  if(_o.pause_on_tab_switch===!!1){if(t($('html').data().__TAB,'u')){$('html').data('__TAB',1);$(document).on('visibilitychange',function(){$('.t-container').parent().each(function(){$(this).p((($(document).attr('visibilityState').charAt(0)=='h')?!!1:!1));});});}}
+  if(_o.pause_on_tab_switch===!!1){if(t($('html').data().__TAB,'u')){$('html').data('__TAB',1);$(document).on('visibilitychange',function(){$('.t-container').parent().each(function(){h=$(document).attr('visibilityState').charAt(0);if(h=='h'&&$(this).data().paused)$(this).data('keep_paused',1);$(this).p(((h=='h')?!!1:(($(this).data().keep_paused&&$(this).removeData('keep_paused'))?!!1:!1)));});});}}
   else if(_o.pause_on_tab_switch===!1&&$('html').data().__TAB){$('html').removeData('__TAB');$(document).off('visibilitychange');}
   
 
