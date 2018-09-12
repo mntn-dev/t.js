@@ -38,7 +38,7 @@ h2,h3,h4{border-bottom:1px solid magenta;}
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- 3.3.1 -->
-<script src="https://rawgit.com/mntn-dev/t.js/master/t.js"></script> <!-- 1.2 -->
+<script src="https://rawgit.com/mntn-dev/t.js/master/t.js"></script> <!-- 1.3 -->
 
 
 <script type="text/javascript">
@@ -49,15 +49,17 @@ $.getJSON('https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extr
 $.each(_.query.pages,function(p){$(document).attr('title','#'+p);
 
   $('#t').t((_.query.pages[p].extract.replace(/(File:.*?\.jpg)/g,'<mark>$1</mark>').replace(/(<ul[\s\S]+<\/ul>)/g,'<ins>$1</ins>')||'<mark>err:</mark> no extract for #'+p)+'<ins>3</ins>',
-  {speed:30,beep:true,caret:'\u2588',pause_on_click:true,typing:function(elm,chr_or_elm,left,total){
+  {speed:30,beep:true,caret:'\u2588',pause_on_click:true,pause_on_tab_switch:true,typing:function(elm,chr_or_elm,left,total){
     $('#s_bar').css({width:((left*100)/total)+'%'});},fin:function(){w();}});})});
 }
 
 
 $(function(){
 
-$(window).on('blur focus',function(e){if($('#t').data().t)$('#t').p((e.type=='blur')?true:false);});
+  //obsolete; use pause_on_tab_switch setting instead (Page Visibility API)
+  //$(window).on('blur focus',function(e){if($('#t').data().t)$('#t').p((e.type=='blur')?true:false);});
 
+  
 w();
 
 });
