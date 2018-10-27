@@ -10,6 +10,12 @@ Nice features 👌
   * delaying (numeric-filled <code>&lt;ins&gt;</code>)
   * instant inserts (non-numeric <code>&lt;ins&gt;</code>)
 
+Docs/demos
+---
+* <a href="https://mntn-dev.github.io/t.js/" target="_blank">@github.io</a>
+* <a href="https://mntn-dev.github.io/t.js/demo.htm" target="_blank">@demo.htm</a> / <a href="https://mntn-dev.github.io/t.js/demo2.htm" target="_blank">@demo2.htm</a>
+* <a href="https://mn.tn/p" target="_blank">@Pow!</a>
+
 
 Latest changes
 ---
@@ -19,13 +25,4 @@ v   |  &nbsp;
 1.3    |  added `pause_on_tab_switch` setting ([Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API))
 1.2    | `beep`-relevant __AudioContext__ fix ([Safari-required](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html#//apple_ref/doc/uid/TP40009523-CH6-SW2) `webkit` prefix)
 
-
-Docs/demos
----
-* <a href="https://mntn-dev.github.io/t.js/" target="_blank">@github.io</a>
-* <a href="https://mntn-dev.github.io/t.js/demo.htm" target="_blank">@demo.htm</a> / <a href="https://mntn-dev.github.io/t.js/demo2.htm" target="_blank">@demo2.htm</a>
-* <a href="https://mn.tn/p" target="_blank">@Pow!</a>
-
-License
----
-MIT
+<details><summary>License</summary>MIT</details>
