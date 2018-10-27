@@ -23,7 +23,7 @@ v   |  &nbsp;
 Docs/demos
 ---
 * <a href="https://mntn-dev.github.io/t.js/" target="_blank">@github.io</a>
-* <a href="https://rawgit.com/mntn-dev/t.js/master/demo.htm" target="_blank">@demo.htm</a> / <a href="https://rawgit.com/mntn-dev/t.js/master/demo2.htm" target="_blank">@demo2.htm</a>
+* <a href="https://mntn-dev.github.io/t.js/demo.htm" target="_blank">@demo.htm</a> / <a href="https://mntn-dev.github.io/t.js/demo.htm2" target="_blank">@demo2.htm</a>
 * <a href="https://mn.tn/p" target="_blank">@Pow!</a>
 
 License
