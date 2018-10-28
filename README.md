@@ -1,4 +1,4 @@
-<img src="https://mntn-dev.github.io/t.js/t.js.png" height="300" width="300" alt=""/><br/>
+<img src="https://mntn-dev.github.io/t.js/t.js.png" height="75" width="75" alt="$.t.js"/><br/>
 
 Nice features 👌
 ---
