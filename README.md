@@ -26,7 +26,7 @@ v   |  &nbsp;
 1.2    | `beep`-relevant __AudioContext__ fix ([Safari-required](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html#//apple_ref/doc/uid/TP40009523-CH6-SW2) `webkit` prefix)
 
 
-Font recommendations 💾
+💾 Font recommendations 
 ---
 * [Steps Mono](https://github.com/raphaelbastide/steps-mono)
 * [Lab Mono](https://github.com/hatsumatsu/Lab-Mono)
