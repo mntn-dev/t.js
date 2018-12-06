@@ -33,7 +33,7 @@ v   |  &nbsp;
 * [Monoid](https://github.com/larsenwork/monoid)
 * [Tamzen](https://github.com/sunaku/tamzen-font)
 * [Fixedsys Excelsior](https://github.com/kika/fixedsys)
-* [PICO-8 Programm Fonts](https://github.com/juanitogan/p8-programming-fonts)
+* [PICO-8 Programming Fonts](https://github.com/juanitogan/p8-programming-fonts)
 * [ChicagoFLF](https://fontlibrary.org/en/font/chicagoflf)
 * [THE OLDSCHOOL PC FONT RESOURCE](https://int10h.org/oldschool-pc-fonts/fontlist/)
 
