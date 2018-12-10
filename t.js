@@ -5,7 +5,7 @@
 
 $.fn.t=function($c,$o){return this.each(function(){
 
- var _o=$o,_c=$c,c=$(this),o,oo,P='paused',p=-1,tt=!1,ss=0,bs=0,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
+ var _o=$o,_c=$c,c=$(this),o,_,_i,_s,oo,P='paused',p=-1,tt=!1,ss=0,bs=0,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
  q2='12qwertzuiop\u00fc+asdfghjkl\u00f6\u00e4#<yxcvbnm,.-!"§$%&/(()=?1234567890\u00df*p+',t=function(_1,_2){
  return $.type(_1)[0]==(_2||'n');},f=function(){_g=$.grep(d,function(f){return(f[0]=='&'||!f[1]);}).length-1;return(_g>-1)?_g:0;},
  b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
