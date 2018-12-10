@@ -33,7 +33,7 @@ ins,del{text-decoration:none;}
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script> <!-- 3.3.1 -->
-<script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script> <!-- 1.3.1 -->
+<script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script> <!-- 1.4 -->
 
 
 <script type="text/javascript">
@@ -82,7 +82,7 @@ Methods
   $(elm).t('add',content);         // adds content; shorthand: $(elm).a(content);
   $(elm).t('pause'[,true/false]);  // pauses typing (toggles if 2nd param omitted); shorthand: $(elm).p([true/false]);
   $(elm).t('beep');                // manual beepin' (initialised/not-typing); shorthand: $(elm).b();
-
+  $(elm).t('speed',ms);            // typing speed change at runtime; shorthand: $(elm).s(ms);
 
 Data/properties
 
@@ -114,6 +114,7 @@ Data/properties
 
 <kbd>some <strong>typing text</strong></kbd> -> will apply setting's mistype[=1:N] rate here (will be 10 if unset)
 
+<s>20</s> -> changes typing speed to 20 milliseconds
 
 */
   
@@ -139,6 +140,7 @@ I provide full <strong><u title="Hypertext Markup Language">HTML</u> tag</strong
 <ins><span class="g">*</span> delete (<code>&lt;del&gt;</code>)</ins><ins>.5</ins>
 <ins><span class="g">*</span> delay (numeric <code>&lt;ins&gt;</code>)</ins><ins>.5</ins>
 <ins><span class="g">*</span> insert (non-numeric <code>&lt;ins&gt;</code>)</ins><ins>.5</ins>
+<ins><span class="g">*</span> change typing speed (numeric <code>&lt;s&gt;</code>)</ins><ins>.5</ins>
 <em>&rarr; Hypertypin' Markup Language (HTyML)</em>
  
 <a target="_blank" href="https://mntn-dev.github.io/t.js">Learn more</a>.
