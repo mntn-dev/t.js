@@ -1,4 +1,4 @@
-/*t.js-1.5;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.5.1;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 ;(function($){
 
@@ -53,8 +53,9 @@ $.fn.t=function($c,$o){return this.each(function(){
   if(_o.beep===!!1&&t($('html').data().__TAC,'u')){$('html').data('__TAC',__TAC=(window.AudioContext=(window.AudioContext||window.webkitAudioContext))?new AudioContext():!1);if(!__TAC)_o.beep=!1;}
   if(_o.repeat===!1)_o.repeat=-3;  
  
+  (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);
   if(_o.caret===!!1)_o.caret='\u258e';if(t(_o.caret,'s')&&!$('.t-caret',c)[0]){
-  (_o.blink===!!1)&&(_o.blink=_o.speed*3);(t(_o.blink))&&(_o.blink<100)&&(_o.blink=100);(!t(_o.blink))&&(_o.blink=!1);
+  (!t(_o.blink))&&(_o.blink=!1);
    
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
    _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(++bs>=((_=$$$.parent()).data().blink)/10)bs=0;else return;if((_.data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},1e1)));
