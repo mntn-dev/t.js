@@ -1,4 +1,4 @@
-/*t.js-1.5.2;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.5.3;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 
 ;(function($){
@@ -129,7 +129,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   {__+=(~~(Math.random()*2))+1;~~(Math.random()*2)&&(__-=3);d=$.merge([((k.charCodeAt(0)<0x5a)?q[__].toUpperCase():q[__]),'</del>',k],d);
   k='<del data-ins=".25" data-del="'+z+'"></del>';}if(k&&k[1]=='/'&&c.data().ins)k=~~((Number(c.data().ins)*1e3)/_.data().speed);tt=!tt;
 
- },1e1,C));
+ },1e1));
 
 
 });},
