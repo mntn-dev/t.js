@@ -22,6 +22,7 @@ Latest changes
 ---
 v   |  &nbsp;
 --- | ---
+1.5.2  | added `t_off([true])` method to destroy typer's instance
 1.5.1  | added typing-speed-change at runtime: `<s>` / `$(elm).s(ms)`
 1.3.1  | `pause_on_tab_switch` minor fix: keep previously paused `$(elm)` paused if window/tab is reactivated
 1.3    |  added `pause_on_tab_switch` setting ([Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API))
