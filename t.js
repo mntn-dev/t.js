@@ -1,13 +1,13 @@
-/*t.js-1.5.1;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.5.2;(c)2014-2018 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 ;(function($){
 
 $.fn.t=function($c,$o){return this.each(function(){
 
- var _o=$o,_c=$c,c=$(this),o,_,_i,_s,oo,P='paused',p=-1,tt=!1,ss=0,bs=0,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
+ var _o=$o,_c=$c,c=C=$(this),o,_,_i,_s,oo,bi,P='paused',p=-1,tt=!1,ss=0,bs=0,bb=-1,z='\u200b',q='12qwertyuiop[]\asdfghjkl;zxcvbnm,./~!@#$%^&*()_+:1234567890-=op'.split([]),
  q2='12qwertzuiop\u00fc+asdfghjkl\u00f6\u00e4#<yxcvbnm,.-!"§$%&/(()=?1234567890\u00df*p+',t=function(_1,_2){
  return $.type(_1)[0]==(_2||'n');},f=function(){_g=$.grep(d,function(f){return(f[0]=='&'||!f[1]);}).length-1;return(_g>-1)?_g:0;},
- b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;$$$.parent().data('blinking',bb=((!_)?0:1));},
+ b=function(_){if(bb==_)return;if(!_o.blink)return;if(_o.blink_perm)return;C.data('blinking',bb=((!_)?0:1));},
  B={c:0,beep:function(){if(B.c==0)B.c=$('html').data().__TAC;if(B.o)B.o.stop();B.o=B.c.createOscillator();B.o.frequency.setValueAtTime(1,B.c.currentTime);B.g=B.c.createGain();B.o.connect(B.g);
  B.g.connect(B.c.destination);B.o.start();B.o.stop(B.c.currentTime+0.03);}};
  
@@ -58,7 +58,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   (!t(_o.blink))&&(_o.blink=!1);
    
    oo=$('<'+_o.tag+'/>',{'class':'t-caret',html:_o.caret}).appendTo(c);
-   _o.blink&&c.append(z)&&(c.data('bi',setInterval(function(){if(++bs>=((_=$$$.parent()).data().blink)/10)bs=0;else return;if((_.data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},1e1)));
+   _o.blink&&c.append(z)&&(c.data('bi',bi=setInterval(function(){if(C.length==0)return(clearInterval(C.data('bi')));if(++bs>=(C.data().blink)/10)bs=0;else return;if((C.data().blinking|(v=(oo.css('visibility')[0]=='h')))||_o.blink_perm)oo.css({visibility:(v)?'visible':'hidden'});},1e1)));
   }
 
   _o.blink||(c.data().bi&&clearInterval(c.data().bi)&&c.removeData('bi'));
@@ -73,7 +73,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   $('.typing-add',c).remove();
 
   $$$=c=$(':first',c);
-  d=(t(_c,'s'))?_c:c.html();d==''&&(d=z);c.empty();$$$.parent().show().css({visibility:'visible'});
+  d=(t(_c,'s'))?_c:c.html();d==''&&(d=z);c.empty();C.show().css({visibility:'visible'});
   t(_o.delay)&&_o.delay>0&&(k=~~((_o.delay*1e3)/_o.speed))&&_o.blink_perm||(b(1));
 
   T=t(_o.typing,'f');
@@ -96,12 +96,12 @@ $.fn.t=function($c,$o){return this.each(function(){
  c=c.replace(/(<s>.*?<\/s>|<[\/]?.*?>)/g,'');return('<del'+b+_s+' data-del="'+c.replace(/\n/,'\\n')+'" data-ins="'+_i+'">'+((c!='*')?c:'')+'</del>');}).
  replace(/<s>\s*(\d+)\s*<\/s>/g,'<s data-speed="$1"></s>').replace(/<(\w+)(.*?)>/g,'<$1$2><#/$1>').replace(/<\/(\w+)>/g,'</> ($1)').replace(/<[#]+/g,'<').replace(/(\/del>)\*</g,'$1<').
  match(/<ins.*?>[\s\S]*?<\/ins>|<[^<]+\/>|<\/> \(\w+\)|<[\s\S]+?><\/\w+>|&[#x]?[a-z0-9]+;|\r|\n|\t|\S|\s/ig);
- !t(k)&&(k=d.shift());d.push(z);_o.locale=='de'&&(q=q2);dl=f()+1;!a&&t(_o.init,'f')&&_o.init($$$.parent());
+ !t(k)&&(k=d.shift());d.push(z);_o.locale=='de'&&(q=q2);dl=f()+1;!a&&t(_o.init,'f')&&_o.init(C);
 
 
- $$=setInterval(function(){
+ C.data('ti',$$=setInterval(function(){
  
-  _=$$$.parent();if(++ss>=(_.data('speed')/10))ss=0;else return;
+  _=C;if(++ss>=(_.data('speed')/10))ss=0;else return;
   if(_.data(P)){p=1;return;}if(tt)return;tt=!tt;
  
   
@@ -120,7 +120,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   while(1){_.data().beep===!!1&&B.beep();c.append(k);T&&_o.typing(_,k,f(),dl);!/<ins.*?>[\s\S]+</.test(k)&&/></.test(k)&&(c=c.find(':last'));
   if(_ss=c.data('speed'))_.s(_ss);if(d[0]&&/<\w+/.test(d[0]))k=d.shift();else break;}
   
-  if(!(k=d.shift())){clearInterval($$);_.removeData(['is_typing',P]);
+  if(!(k=d.shift())){clearInterval($$);_.removeData('ti');_.removeData(['is_typing',P]);
   t(_o.repeat)&&(--_o.repeat);if(_o.repeat>-1){_o.init=!1;_.t(t(_c,'o')?_o:_c,_o);return;}
   else{b(1);t(_o.fin,'f')&&_o.fin(_);}return;}
 
@@ -128,7 +128,7 @@ $.fn.t=function($c,$o){return this.each(function(){
   {__+=(~~(Math.random()*2))+1;~~(Math.random()*2)&&(__-=3);d=$.merge([((k.charCodeAt(0)<0x5a)?q[__].toUpperCase():q[__]),'</del>',k],d);
   k='<del data-ins=".25" data-del="'+z+'"></del>';}if(k&&k[1]=='/'&&c.data().ins)k=~~((Number(c.data().ins)*1e3)/_.data().speed);tt=!tt;
 
- },1e1);
+ },1e1));
 
 
 });},
@@ -136,7 +136,7 @@ $.fn.t=function($c,$o){return this.each(function(){
 $.fn.a=function($_){return this.each(function(){if($(this).data().t)$(this).t('add',$_);});},
 $.fn.p=function($_){return this.each(function(){if($(this).data().is_typing)$(this).t('pause',($_)?(($_===!1||$_===!!1)?$_:undefined):undefined);});},
 $.fn.b=function($_){return this.each(function(){if($(this).data().t)$(this).t('beep');});},
-$.fn.s=function($_){return this.each(function(){if($(this).data().t)$(this).t('speed',$_);});}
-
+$.fn.s=function($_){return this.each(function(){if($(this).data().t)$(this).t('speed',$_);});},
+$.fn.t_off=function($_){return this.each(function(){if($(this).data().t){if(ti=C.data('ti'))clearInterval(ti);if(bi=C.data('bi'))clearInterval(bi);C.removeData();$('.t-container',C).replaceWith(function(){return this.childNodes;});$('.t-caret',C).remove();};if($_===!!1)C.text('');});}
 
 })(jQuery);
