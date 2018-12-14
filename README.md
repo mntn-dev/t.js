@@ -41,6 +41,7 @@ v   |  &nbsp;
 * [ChicagoFLF](https://fontlibrary.org/en/font/chicagoflf) (↗)
 * [VT323](https://fonts.google.com/specimen/VT323) (↗)
 * [THE OLDSCHOOL PC FONT RESOURCE](https://int10h.org/oldschool-pc-fonts/fontlist/) (↗)
+* [1980XX](https://arcade.itch.io/1980) (↗)
 * [Decima Mono](https://myfonts.com/fonts/tipografiaramis/decima-mono/) (↗/$)
 
 <br/><details><summary>CDN</summary><code>https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js</code></details>
