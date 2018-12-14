@@ -35,9 +35,11 @@ v   |  &nbsp;
 * [Lab Mono](https://github.com/hatsumatsu/Lab-Mono)
 * [Monoid](https://github.com/larsenwork/monoid)
 * [Tamzen](https://github.com/sunaku/tamzen-font)
+* [Whois mono](https://github.com/raphaelbastide/Whois-mono)
 * [Fixedsys Excelsior](https://github.com/kika/fixedsys)
 * [PICO-8 Programming Fonts](https://github.com/juanitogan/p8-programming-fonts)
 * [ChicagoFLF](https://fontlibrary.org/en/font/chicagoflf) (↗)
+* [VT323](https://fonts.google.com/specimen/VT323) (↗)
 * [THE OLDSCHOOL PC FONT RESOURCE](https://int10h.org/oldschool-pc-fonts/fontlist/) (↗)
 * [Decima Mono](https://myfonts.com/fonts/tipografiaramis/decima-mono/) (↗/$)
 
