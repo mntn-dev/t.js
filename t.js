@@ -139,7 +139,7 @@ $.fn.a=function($_){return this.each(function(){if($(this).data().t)$(this).t('a
 $.fn.p=function($_){return this.each(function(){if($(this).data().is_typing)$(this).t('pause',($_)?(($_===!1||$_===!!1)?$_:undefined):undefined);});},
 $.fn.b=function($_){return this.each(function(){if($(this).data().t)$(this).t('beep');});},
 $.fn.s=function($_){return this.each(function(){if($(this).data().t)$(this).t('speed',$_);});},
-$.fn.q=function($_){return this.each(function(){if($(this).data().t&&$.type($_)[0]=='s'){if(!(q=$(this).data()).q)q.q=[];q.q.push($_);if(!$(this).data().is_typing)$(this).a(q.q.shift());};});},
+$.fn.q=function($_){return this.each(function(){if($(this).data().t&&$.type($_)[0].match(/s|n/)){if(!(q=$(this).data()).q)q.q=[];q.q.push($_.toString());if(!$(this).data().is_typing)$(this).a(q.q.shift());};});},
 $.fn.t_off=function($_){return this.each(function(){if($(this).data().t){if(ti=C.data('ti'))clearInterval(ti);if(bi=C.data('bi'))clearInterval(bi);C.removeData();$('.t-container',C).replaceWith(function(){return this.childNodes;});$('.t-caret',C).remove();};if($_===!!1)C.text('');});}
 
 })(jQuery);
