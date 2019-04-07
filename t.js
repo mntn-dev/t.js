@@ -1,4 +1,4 @@
-/*t.js-1.5.4;(c)2014-2019 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.5.5;(c)2014-2019 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 
 ;(function($){
@@ -140,6 +140,6 @@ $.fn.p=function($_){return this.each(function(){if($(this).data().is_typing)$(th
 $.fn.b=function($_){return this.each(function(){if($(this).data().t)$(this).t('beep');});},
 $.fn.s=function($_){return this.each(function(){if($(this).data().t)$(this).t('speed',$_);});},
 $.fn.q=function($_){return this.each(function(){if($(this).data().t&&$.type($_)[0].match(/s|n/)){if(!(q=$(this).data()).q)q.q=[];q.q.push($_.toString());if(!$(this).data().is_typing)$(this).a(q.q.shift());};});},
-$.fn.t_off=function($_){return this.each(function(){if($(this).data().t){if(ti=C.data('ti'))clearInterval(ti);if(bi=C.data('bi'))clearInterval(bi);C.removeData();$('.t-container',C).replaceWith(function(){return this.childNodes;});$('.t-caret',C).remove();};if($_===!!1)C.text('');});}
+$.fn.t_off=function($_){return this.each(function(){if($(this).data().t){C=$(this);if(ti=C.data('ti'))clearInterval(ti);if(bi=C.data('bi'))clearInterval(bi);C.removeData();$('.t-container',C).replaceWith(function(){return this.childNodes;});$('.t-caret',C).remove();};if($_===!!1)C.text('');});}
 
 })(jQuery);
