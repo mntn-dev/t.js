@@ -1,4 +1,4 @@
-/*t.js-1.5.5;(c)2014-2019 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
+/*t.js-1.5.6;(c)2014-2019 - Mntn(r) <https://mn.tn/> c/o Benjamin Lips <g--[AT]--mn.tn>;MIT-Licensed <https://mit-license.org/>;For documentation, see <https://mntn-dev.github.io/t.js/>*/
 
 
 ;(function($){
@@ -95,7 +95,7 @@ $.fn.t=function($c,$o){return this.each(function(){
  replace(/<ins(.*?)>([\s\S]*?)(<\/ins>)/g,function(a,b,c){return('<#ins'+b+'>'+c.replace(/<(?!#)/g,'<#')+'<#/ins>'+(!c?'</ins>':''));}).
  replace(/<(del.*?data-del=")(.*?)(".*?)><\/(del>)/g,'<#$1$2$3><#/$4$2</$4').
  replace(/<del(.*?)>([\s\S]*?)<\/del>/g,function(a,b,c,d){_s=c.match(/<s>\s*(.*?)\s*<\/s>/i);_s=(_s&&_s[0])?(' data-s=\"'+(_s[1]||'1')+'"'):'';_i=(c.match(/data-ins=\"(.*?)\"/));_i=(_i&&_i[1])?_i[1]:((_s=='')?.25:.75);
- c=c.replace(/(<s>.*?<\/s>|<[\/]?.*?>)/g,'');return('<del'+b+_s+' data-del="'+c.replace(/\n/,'\\n')+'" data-ins="'+_i+'">'+((c!='*')?c:'')+'</del>');}).
+ c=c.replace(/(<s>.*?<\/s>|<[\/]?.*?>)/g,'');return('<del'+b+_s+' data-del="'+c.replace(/\n/g,'\\n')+'" data-ins="'+_i+'">'+((c!='*')?c:'')+'</del>');}).
  replace(/<s>\s*(\d+)\s*<\/s>/g,'<s data-speed="$1"></s>').replace(/<(\w+)(.*?)>/g,'<$1$2><#/$1>').replace(/<\/(\w+)>/g,'</> ($1)').replace(/<[#]+/g,'<').replace(/(\/del>)\*</g,'$1<').
  match(/<ins.*?>[\s\S]*?<\/ins>|<[^<]+\/>|<\/> \(\w+\)|<[\s\S]+?><\/\w+>|&[#x]?[a-z0-9]+;|\r|\n|\t|\S|\s/ig);
  !t(k)&&(k=d.shift());d.push(z);_o.locale=='de'&&(q=q2);dl=f()+1;!a&&t(_o.init,'f')&&_o.init(C);
