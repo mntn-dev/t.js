@@ -48,4 +48,4 @@ v   |  &nbsp;
 * [Decima Mono](https://myfonts.com/fonts/tipografiaramis/decima-mono/) (↗/$)
 
 <br/><details><summary>CDN</summary><code>https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js</code></details>
-<details><summary>License</summary><strong>MIT</strong></details>
+<details><summary>License</summary><strong>MIT</strong> <code>&lt;https://mit-license.org/&gt;</code></details>
