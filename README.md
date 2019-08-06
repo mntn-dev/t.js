@@ -22,7 +22,8 @@ Latest changes
 ---
 v   |  &nbsp;
 --- | ---
-1.5.5  | `.t_off()` fixed
+1.5.6  | multiline `<del>` fix
+1.5.5  | `.t_off()` fix
 1.5.4  | added queued type processing (`$(elm).t('queue',content)` / `$(elm).q(content)`)
 1.5.3  | added `.t_off([true])` method to destroy typer's instance
 1.5.1  | added typing-speed-change at runtime: `<s>` / `$(elm).s(ms)`
