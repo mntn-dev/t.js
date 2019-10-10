@@ -41,7 +41,7 @@ v   |  &nbsp;
 * [Whois mono](https://github.com/raphaelbastide/Whois-mono)
 * [Fixedsys Excelsior](https://github.com/kika/fixedsys)
 * [PICO-8 Programming Fonts](https://github.com/juanitogan/p8-programming-fonts)
-* [IBM Plex](https://ibm.com/plex) (↗)
+* [IBM Plex Mono](https://github.com/IBM/plex/tree/master/IBM-Plex-Mono/fonts/complete) ([↗](https://ibm.com/plex/))
 * [ChicagoFLF](https://fontlibrary.org/en/font/chicagoflf) (↗)
 * [VT323](https://fonts.google.com/specimen/VT323) (↗)
 * [THE OLDSCHOOL PC FONT RESOURCE](https://int10h.org/oldschool-pc-fonts/fontlist/) (↗)
