@@ -1,7 +1,8 @@
 <p><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mntn-dev/t.js?color=magenta"/>
 <img alt="jsDelivr hits (GitHub)" src="https://img.shields.io/jsdelivr/gh/hw/mntn-dev/t.js?color=magenta"/>
 <img alt="GitHub" src="https://img.shields.io/github/license/mntn-dev/t.js?color=magenta"/>
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/mntn-dev/t.js?color=magenta"/></p>
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/mntn-dev/t.js?color=magenta"/>
+<a target="_blank" href="https://code.jquery.com/"><img alt="GitHub issues" src="https://img.shields.io/badge/reqs-jQuery-magenta"/></a></p>
 <br/><br/><img src="https://mntn-dev.github.io/t.js/t.js.gif" alt="$.t.js"/><br/>
 
 Nice features 👌
