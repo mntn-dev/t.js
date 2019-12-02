@@ -1,5 +1,8 @@
-<a href="https://data.jsdelivr.com/v1/package/gh/mntn-dev/t.js/badge?style=rounded"><img src="https://data.jsdelivr.com/v1/package/gh/mntn-dev/t.js/badge?style=rounded" alt=""/></a><br/><br/>
-<img src="https://mntn-dev.github.io/t.js/t.js.gif" alt="$.t.js"/><br/>
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mntn-dev/t.js?color=magenta"/>
+<img alt="jsDelivr hits (GitHub)" src="https://img.shields.io/jsdelivr/gh/hw/mntn-dev/t.js?color=magenta"/>
+<img alt="GitHub" src="https://img.shields.io/github/license/mntn-dev/t.js?color=magenta"/>
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/mntn-dev/t.js?color=magenta"/>
+<br/><br/><img src="https://mntn-dev.github.io/t.js/t.js.gif" alt="$.t.js"/><br/>
 
 Nice features 👌
 ---
