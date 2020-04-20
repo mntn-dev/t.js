@@ -5,6 +5,10 @@
 <a target="_blank" href="https://code.jquery.com/"><img alt="GitHub issues" src="https://img.shields.io/badge/reqs-jQuery-magenta"/></a></p>
 <br/><br/><img src="https://mntn-dev.github.io/t.js/t.js.gif" alt="$.t.js"/><br/>
 
+⚠️ iOS 13.3 note (April 2020)
+---
+``beep[:true]`` freezes the typewriter, read more: <a href="https://github.com/mntn-dev/t.js/issues/11#issuecomment-616455871">issue #11</a>
+
 Nice features 👌
 ---
 * full <code>HTML</code> support
