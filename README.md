@@ -44,8 +44,10 @@ v   |  &nbsp;
 💾 Font recommendations 
 ---
 * [Steps Mono](https://github.com/raphaelbastide/steps-mono)
+* [Hack](https://github.com/source-foundry/Hack)
 * [Lab Mono](https://github.com/hatsumatsu/Lab-Mono)
 * [Monoid](https://github.com/larsenwork/monoid)
+* [Victor Mono](https://github.com/rubjo/victor-mono/)
 * [Tamzen](https://github.com/sunaku/tamzen-font)
 * [Whois mono](https://github.com/raphaelbastide/Whois-mono)
 * [Fixedsys Excelsior](https://github.com/kika/fixedsys)
