@@ -49,6 +49,7 @@ v   |  &nbsp;
 * [Monoid](https://github.com/larsenwork/monoid)
 * [Victor Mono](https://github.com/rubjo/victor-mono/)
 * [Tamzen](https://github.com/sunaku/tamzen-font)
+* [x3x3](https://github.com/mntn-dev/x3x3#available-as-font-file)
 * [Whois mono](https://github.com/raphaelbastide/Whois-mono)
 * [Fixedsys Excelsior](https://github.com/kika/fixedsys)
 * [PICO-8 Programming Fonts](https://github.com/juanitogan/p8-programming-fonts)
