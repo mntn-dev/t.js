@@ -24,7 +24,7 @@ Docs/demos
 ---
 * <strong><a href="https://mntn-dev.github.io/t.js/" target="_blank">@github.io</a></strong>
 * <a href="https://mntn-dev.github.io/t.js/demo.htm" target="_blank">@demo.htm</a> / <a href="https://mntn-dev.github.io/t.js/demo2.htm" target="_blank">@demo2.htm</a>
-* <a href="https://mn.tn/pow!" target="_blank">@Pow!</a>
+* <strike><a href="https://mn.tn/pow!" target="_blank">@Pow!</a></strike>
 
 
 Latest changes
