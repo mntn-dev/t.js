@@ -45,7 +45,7 @@ v   |  &nbsp;
 ---
 * [Steps Mono](https://github.com/raphaelbastide/steps-mono)
 * [Hack](https://github.com/source-foundry/Hack)
-* [Iosevka](https://github.com/be5invis/Iosevka/) ([↗]https://typeof.net/Iosevka/)
+* [Iosevka](https://github.com/be5invis/Iosevka/) ([↗](https://typeof.net/Iosevka/))
 * [Lab Mono](https://github.com/hatsumatsu/Lab-Mono)
 * [Monoid](https://github.com/larsenwork/monoid)
 * [Victor Mono](https://github.com/rubjo/victor-mono/)
